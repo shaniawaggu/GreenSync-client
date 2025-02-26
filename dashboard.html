@@ -9,6 +9,8 @@
     <link rel="stylesheet" haref="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./static/styles.css">
     <link rel="icon" type="image/png" href="/assets/favicon1.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./javascript/dashboard.js" defer></script>
     <style>
         .card {
             transition: none !important;
@@ -102,8 +104,9 @@
                         <div class="card shadow-lg">
                             <div class="card-header bg-warning text-dark">Energy Usage</div>
                             <div class="card-body">
-                                <p class="text-center">[ENERGY CAPACITY OF THE WEEK EXPECTED]</p>
-                                <img src="./assets/Screenshot 2025-02-25 122808.png" alt="energy-capacity" style="max-width: 555px; height: 300px;"/>
+                                <div style="width: 100%; height: 100%; margin: 0;">
+                                    <canvas id="weatherChart"></canvas>  
+                                </div>
                             </div>
                         </div>
                         <div class="card shadow-lg">
@@ -112,7 +115,6 @@
                                 <p class="text-center">[ANOTHER GRAPH OR COST SAVINGS]</p>
                                 <p class="text-center fs-3">So far with GreenSync You have saved</p>
                                 <p class="text-center text-success fs-5">£1.43</p>
-
                             </div>
                         </div>
                     </div>
