@@ -220,7 +220,7 @@ const data = {"hourly": {
 const timeLabels = data.hourly.time.map((t) => new Date(t).toLocaleString('en-GB', {
     day: '2-digit', month: '2-digit', hour: '2-digit'
 }));
-// const cloudCoverData = data.hourly.cloud_cover;
+const cloudCoverData = data.hourly.cloud_cover;
 const directRadiationData = data.hourly.direct_normal_irradiance;
 const windSpeed = data.hourly.wind_speed_120m;
 
@@ -231,16 +231,16 @@ const weatherChart = new Chart(ctx, {
     data: {
         labels: timeLabels,
         datasets: [
-            // {
-            //     label: 'Cloud Cover (%)',
-            //     data: cloudCoverData,
-            //     borderColor: 'rgba(75, 192, 192, 1)',
-            //     backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            //     borderWidth: 1,
-            //     tension: 0.7, // Smooth lines
-            //     yAxisID: 'y1',
-            //     pointRadius: 0.1,
-            // },
+            {
+                label: 'Cloud Cover (%)',
+                data: cloudCoverData,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 2,
+                tension: 0.7, // Smooth lines
+                yAxisID: 'y1',
+                pointRadius: 0.1,
+            },
             {
                 label: 'Direct Radiation (W/m²)',
                 data: directRadiationData,
@@ -266,17 +266,17 @@ const weatherChart = new Chart(ctx, {
     options: {
         responsive: true,
         scales: {
-            // y1: {
-            //     type: 'linear',
-            //     position: 'left',
-            //     title: {
-            //         display: true,
-            //         text: 'Cloud Cover (%)',
-            //     },
-            //     ticks: {
-            //         beginAtZero: true,
-            //     },
-            // },
+            y1: {
+                type: 'linear',
+                position: 'left',
+                title: {
+                    display: true,
+                    text: 'Cloud Cover (%)',
+                },
+                ticks: {
+                    beginAtZero: true,
+                },
+            },
             y2: {
                 type: 'linear',
                 position: 'right',
