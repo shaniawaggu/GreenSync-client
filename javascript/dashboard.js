@@ -220,34 +220,35 @@ const data = {"hourly": {
 const timeLabels = data.hourly.time.map((t) => new Date(t).toLocaleString('en-GB', {
     day: '2-digit', month: '2-digit', hour: '2-digit'
 }));
-const cloudCoverData = data.hourly.cloud_cover;
+// const cloudCoverData = data.hourly.cloud_cover;
 const directRadiationData = data.hourly.direct_normal_irradiance;
 const windSpeed = data.hourly.wind_speed_120m;
 
-// Create the chart
+// use Chart object to create chart called weatherChart
+
 const ctx = document.getElementById('weatherChart').getContext('2d');
 const weatherChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: timeLabels,
         datasets: [
-            {
-                label: 'Cloud Cover (%)',
-                data: cloudCoverData,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderWidth: 2,
-                tension: 0.7, // Smooth lines
-                yAxisID: 'y1',
-                pointRadius: 0.1,
-            },
+            // {
+            //     label: 'Cloud Cover (%)',
+            //     data: cloudCoverData,
+            //     borderColor: 'rgba(75, 192, 192, 1)',
+            //     backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            //     borderWidth: 1,
+            //     tension: 0.7, // Smooth lines
+            //     yAxisID: 'y1',
+            //     pointRadius: 0.1,
+            // },
             {
                 label: 'Direct Radiation (W/m²)',
                 data: directRadiationData,
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderWidth: 3,
-                tension: 0.4, // Smooth lines
+                tension: 0.4, 
                 yAxisID: 'y2',
                 pointRadius: 0.2,
             },
@@ -257,7 +258,7 @@ const weatherChart = new Chart(ctx, {
                 borderColor: 'rgba(123, 99, 132, 1)',
                 backgroundColor: 'rgba(123, 99, 132, 0.2)',
                 borderWidth: 2,
-                tension: 0.4, // Smooth lines
+                tension: 0.4,
                 yAxisID: 'y3',
                 pointRadius: 0.2,
             },
@@ -266,17 +267,17 @@ const weatherChart = new Chart(ctx, {
     options: {
         responsive: true,
         scales: {
-            y1: {
-                type: 'linear',
-                position: 'left',
-                title: {
-                    display: true,
-                    text: 'Cloud Cover (%)',
-                },
-                ticks: {
-                    beginAtZero: true,
-                },
-            },
+            // y1: {
+            //     type: 'linear',
+            //     position: 'left',
+            //     title: {
+            //         display: true,
+            //         text: 'Cloud Cover (%)',
+            //     },
+            //     ticks: {
+            //         beginAtZero: true,
+            //     },
+            // },
             y2: {
                 type: 'linear',
                 position: 'right',
@@ -292,7 +293,7 @@ const weatherChart = new Chart(ctx, {
                 type: 'linear',
                 position: 'left',
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Wind Speed (km/h)',
                 },
                 ticks: {
@@ -309,7 +310,7 @@ const weatherChart = new Chart(ctx, {
         plugins: {
             tooltip: {
                 mode: 'index',
-                intersect: false,
+                intersect: true,
             },
             legend: {
                 position: 'top',
