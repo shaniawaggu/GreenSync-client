@@ -16,7 +16,7 @@ document.getElementById("sign-up-form").addEventListener("submit", async (e) => 
             postcode: form.get("postcode")
         })
     }
-
+    console.log(options)
     const response = await fetch("http://localhost:3000/user/register", options);
     const data = await response.json();
 
