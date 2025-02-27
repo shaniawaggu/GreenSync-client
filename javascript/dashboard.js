@@ -285,9 +285,27 @@ const timeLabels = data.hourly.time.map((t) => new Date(t).toLocaleString('en-GB
     day: '2-digit', month: '2-digit', hour: '2-digit'
 }));
 
-
-
 // use Chart object to create chart called weatherChart
+
+
+
+window.addEventListener('DOMContentLoaded', fetch)
+
+async function fetch() {
+    try {
+        const response = await fetch(`http://localhost:3000/forecasts/`)
+        if (response.ok) {
+            const data = await response.json()
+            console.log(data)
+            create(data)
+            console.log(data)
+        } else {
+            throw "Error http status code " + response.status
+        }
+    } catch (err) {
+        console.log(err)
+    }
+}
 
 function createChart(){
     const cloudCoverData = data.hourly.cloud_cover;
