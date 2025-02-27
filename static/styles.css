@@ -91,3 +91,8 @@ footer {
     color: white;
     padding: 15px 0;
 }
+
+.forecast-box:hover{
+    cursor: pointer;
+    background-color: #2E7D32;
+}
