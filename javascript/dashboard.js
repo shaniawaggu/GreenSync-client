@@ -1,4 +1,4 @@
-// Data
+// Data from API 
 const data = {"hourly": {
     "time": [
       "2025-02-26T00:00",
@@ -217,17 +217,85 @@ const data = {"hourly": {
   }
 }
 
+const weekdays = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+
+const dayOne = {
+    date: data.hourly.time[1].split('T')[0],
+    windSpeed: data.hourly.wind_speed_120m.slice(0,24),
+    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(0,24),
+}
+const dateOne = new Date(dayOne.date)
+const weekdayOne = weekdays[dateOne.getDay()]
+
+const dayTwo = {
+    date: data.hourly.time[24].split('T')[0],
+    windSpeed: data.hourly.wind_speed_120m.slice(24,48),
+    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(24,48),
+}
+
+const dateTwo = new Date(dayTwo.date)
+const weekdayTwo = weekdays[dateTwo.getDay()]
+
+const dayThree = {
+    date: data.hourly.time[48].split('T')[0],
+    windSpeed: data.hourly.wind_speed_120m.slice(48,72),
+    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(48,72),
+}
+
+const dateThree = new Date(dayThree.date)
+const weekdayThree = weekdays[dateThree.getDay()]
+
+const dayFour= {
+    date: data.hourly.time[72].split('T')[0],
+    windSpeed: data.hourly.wind_speed_120m.slice(72,96),
+    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(72,96),
+}
+
+const dateFour = new Date(dayFour.date)
+const weekdayFour = weekdays[dateFour.getDay()]
+
+const dayFive = {
+    date: data.hourly.time[96].split('T')[0],
+    windSpeed: data.hourly.wind_speed_120m.slice(96,120),
+    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(96,120),
+}
+
+const dateFive = new Date(dayFive.date)
+const weekdayFive = weekdays[dateFive.getDay()]
+
+const daySix = {
+    date: data.hourly.time[120].split('T')[0],
+    windSpeed: data.hourly.wind_speed_120m.slice(120,144),
+    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(124,144),
+}
+
+const dateSix = new Date(daySix.date)
+const weekdaySix = weekdays[dateSix.getDay()]
+
+const daySeven = {
+    date: data.hourly.time[144].split('T')[0],
+    windSpeed: data.hourly.wind_speed_120m.slice(144,168),
+    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(142,168),
+}
+
+const dateSeven = new Date(daySeven.date)
+const weekdaySeven = weekdays[dateSeven.getDay()]
+
 const timeLabels = data.hourly.time.map((t) => new Date(t).toLocaleString('en-GB', {
     day: '2-digit', month: '2-digit', hour: '2-digit'
 }));
-// const cloudCoverData = data.hourly.cloud_cover;
-const directRadiationData = data.hourly.direct_normal_irradiance;
-const windSpeed = data.hourly.wind_speed_120m;
+
+
 
 // use Chart object to create chart called weatherChart
 
-const ctx = document.getElementById('weatherChart').getContext('2d');
-const weatherChart = new Chart(ctx, {
+function createChart(){
+    const cloudCoverData = data.hourly.cloud_cover;
+    const directRadiationData = data.hourly.direct_normal_irradiance;
+    const windSpeed = data.hourly.wind_speed_120m;
+
+    const ctx = document.getElementById('weatherChart').getContext('2d');
+    const weatherChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: timeLabels,
@@ -250,7 +318,7 @@ const weatherChart = new Chart(ctx, {
                 borderWidth: 3,
                 tension: 0.4, 
                 yAxisID: 'y2',
-                pointRadius: 0.2,
+                pointRadius: 0.2, 
             },
             {
                 label: 'Wind Speed (km/h)',
@@ -293,7 +361,7 @@ const weatherChart = new Chart(ctx, {
                 type: 'linear',
                 position: 'left',
                 title: {
-                    display: false,
+                    display: true,
                     text: 'Wind Speed (km/h)',
                 },
                 ticks: {
@@ -303,7 +371,7 @@ const weatherChart = new Chart(ctx, {
             x: {
                 title: {
                     display: true,
-                    text: 'Time',
+                    text: 'Date',
                 },
             },
         },
@@ -318,3 +386,15 @@ const weatherChart = new Chart(ctx, {
         },
     },
 });
+}
+
+createChart()
+
+const box_1 = document.querySelector('#box_1 strong').textContent = weekdayOne
+const box_2 = document.querySelector('#box_2 strong').textContent = weekdayTwo
+const box_3 = document.querySelector('#box_3 strong').textContent = weekdayThree
+const box_4 = document.querySelector('#box_4 strong').textContent = weekdayFour
+const box_5 = document.querySelector('#box_5 strong').textContent = weekdayFive
+const box_6 = document.querySelector('#box_6 strong').textContent = weekdaySix
+const box_7 = document.querySelector('#box_7 strong').textContent = weekdaySeven
+

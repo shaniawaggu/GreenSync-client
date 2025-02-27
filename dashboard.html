@@ -11,11 +11,6 @@
     <link rel="icon" type="image/png" href="/assets/favicon1.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./javascript/dashboard.js" defer></script>
-    <style>
-        .card {
-            transition: none !important;
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -43,33 +38,33 @@
                 <div class="card mb-3">
                     <div class="card-header bg-success text-white">7-Day Forecast</div>
                     <div class="card-body">
-                        <div class="d-flex flex-column gap-3">
+                        <div class="d-flex flex-column gap-2">
                             <!-- Each day's forecast -->
-                            <div class="forecast-box p-2 border rounded bg-light shadow-sm">
+                            <div class="forecast-box p-2 border rounded bg-light shadow-sm" id="box_1">
                                 <strong>Monday</strong>
                                 <p class="m-0">Sunny, 25°C</p>
                             </div>
-                            <div class="forecast-box p-2 border rounded bg-light shadow-sm">
+                            <div class="forecast-box p-2 border rounded bg-light shadow-sm" id="box_2">
                                 <strong>Tuesday</strong>
                                 <p class="m-0">Cloudy, 22°C</p>
                             </div>
-                            <div class="forecast-box p-2 border rounded bg-light shadow-sm">
+                            <div class="forecast-box p-2 border rounded bg-light shadow-sm" id="box_3">
                                 <strong>Wednesday</strong>
                                 <p class="m-0">Rain, 18°C</p>
                             </div>
-                            <div class="forecast-box p-2 border rounded bg-light shadow-sm">
+                            <div class="forecast-box p-2 border rounded bg-light shadow-sm" id="box_4">
                                 <strong>Thursday</strong>
                                 <p class="m-0">Partly Cloudy, 24°C</p>
                             </div>
-                            <div class="forecast-box p-2 border rounded bg-light shadow-sm">
+                            <div class="forecast-box p-2 border rounded bg-light shadow-sm" id="box_5">
                                 <strong>Friday</strong>
                                 <p class="m-0">Sunny, 27°C</p>
                             </div>
-                            <div class="forecast-box p-2 border rounded bg-light shadow-sm">
+                            <div class="forecast-box p-2 border rounded bg-light shadow-sm" id="box_6">
                                 <strong>Saturday</strong>
                                 <p class="m-0">Rain, 20°C</p>
                             </div>
-                            <div class="forecast-box p-2 border rounded bg-light shadow-sm">
+                            <div class="forecast-box p-2 border rounded bg-light shadow-sm" id="box_7">
                                 <strong>Sunday</strong>
                                 <p class="m-0">Sunny, 28°C</p>
                             </div>
@@ -82,14 +77,15 @@
             <main class="col-md-10">
                 <div class="row">
                     <!-- Large Rectangle Dashboard -->
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-5 mb-4">
                         <div class="card shadow-lg h-100">
                             <div class="card-header bg-primary text-white">Charging Patterns</div>
                             <div class="card-body">
                                 <p class="text-center">Welcome to the GreenSync Dashboard where you can find out the best way to utilise your energy.</p>
                                 <p class="text-center">Using our Dashboard can save you money, help you keep your Electric Vehicle charged while monitoring the renewable capacity of the national grid.</p>
                                 <p class="text-center">Over the next 7 days the average EV user driving 100miles a week will save £3.50 while lowering your CO2 Emissions and helping to reduce our reliance on fossil fuels</p>
-                                <p class="fs-4 text-center text-primary">Best days to charge your car to the MAX</p>
+                                <p class="fs-5 text-center text-primary underline">Best days to charge your car to the MAX</p>
+                                <p class="text-center text-danger fs-6">>>Avoiding peak demand times</p>
                                 <p class="text-center">Monday 7am to 12pm</p>
                                 <p class="text-center">Tuesday 10am to 1pm</p>
                                 <p class="text-center">Wednesday won't be great</p>
@@ -100,21 +96,21 @@
                     </div>
 
                     <!-- Smaller Square Dashboards -->
-                    <div class="col-md-6 d-flex flex-column gap-4">
+                    <div class="col-md-7 d-flex flex-column gap-4">
                         <div class="card shadow-lg">
                             <div class="card-header bg-warning text-dark">Energy Usage</div>
                             <div class="card-body">
-                                <div style="width: 100%; height: 100%; margin: 0;">
-                                    <canvas id="weatherChart"></canvas>  
+                                <div style="width: 100%; min-height: 30vh; margin: 0;">
+                                    <canvas id="weatherChart" style="min-width: fit-content; min-height: 125px;"></canvas>  
                                 </div>
                             </div>
                         </div>
                         <div class="card shadow-lg">
                             <div class="card-header bg-success text-white">Cost Savings</div>
                             <div class="card-body">
-                                <p class="text-center">[ANOTHER GRAPH OR COST SAVINGS]</p>
-                                <p class="text-center fs-3">So far with GreenSync You have saved</p>
-                                <p class="text-center text-success fs-5">£1.43</p>
+                                <p class="text-center fs-4">So far with GreenSync You have saved</p>
+                                <p class="text-center text-success fs-3">£6.43</p>
+                                <p class="text-center text-primary fs-3">240kgs of CO2</p>
                             </div>
                         </div>
                     </div>
