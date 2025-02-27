@@ -36,7 +36,7 @@
             <!-- 7-Day Forecast Sidebar -->
             <aside class="col-md-2">
                 <div class="card mb-3">
-                    <div class="card-header bg-success text-white">7-Day Forecast</div>
+                    <div class="card-header bg-success text-white"><i class="fas fa-cloud-sun me-2"></i> 7-Day Forecast</div>
                     <div class="card-body">
                         <div class="d-flex flex-column gap-2">
                             <!-- Each day's forecast -->
@@ -79,11 +79,11 @@
                     <!-- Large Rectangle Dashboard -->
                     <div class="col-md-5 mb-4">
                         <div class="card shadow-lg h-100">
-                            <div class="card-header bg-primary text-white">Charging Patterns</div>
+                            <div class="card-header bg-primary text-white"><i class="fas fa-charging-station me-2"></i> Charging Patterns</div>
                             <div class="card-body">
-                                <p class="text-center">Welcome to the GreenSync Dashboard where you can find out the best way to utilise your energy.</p>
+                                <p class="text-center">Welcome to the GreenSync dashboard where you can find out the best way to utilise your energy.</p>
                                 <p class="text-center">Using our Dashboard can save you money, help you keep your Electric Vehicle charged while monitoring the renewable capacity of the national grid.</p>
-                                <p class="text-center">Over the next 7 days the average EV user driving 100miles a week will save £3.50 while lowering your CO2 Emissions and helping to reduce our reliance on fossil fuels</p>
+                                <p class="text-center">Over the next 7 days the average EV user driving 100 miles a week will save £3.50 while lowering your CO<sub>2</sub> emissions and helping to reduce our reliance on fossil fuels.</p>
                                 <p class="fs-5 text-center text-primary underline">Best days to charge your car to the MAX</p>
                                 <p class="text-center text-danger fs-6">>>Avoiding peak demand times</p>
                                 <p class="text-center">Monday 7am to 12pm</p>
@@ -98,7 +98,7 @@
                     <!-- Smaller Square Dashboards -->
                     <div class="col-md-7 d-flex flex-column gap-4">
                         <div class="card shadow-lg">
-                            <div class="card-header bg-warning text-dark">Energy Usage</div>
+                            <div class="card-header bg-warning text-dark"><i class="fas fa-bolt me-2"></i> Energy Usage</div>
                             <div class="card-body">
                                 <div style="width: 100%; min-height: 30vh; margin: 0;">
                                     <canvas id="weatherChart" style="min-width: fit-content; min-height: 125px;"></canvas>  
@@ -106,11 +106,13 @@
                             </div>
                         </div>
                         <div class="card shadow-lg">
-                            <div class="card-header bg-success text-white">Cost Savings</div>
-                            <div class="card-body">
-                                <p class="text-center fs-4">So far with GreenSync You have saved</p>
-                                <p class="text-center text-success fs-3">£6.43</p>
-                                <p class="text-center text-primary fs-3">240kgs of CO2</p>
+                            <div class="card-header bg-success text-white text-center">
+                                <i class="fas fa-piggy-bank me-2"></i> Cost Savings
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="fs-4"><i class="fas fa-check-circle text-success me-2"></i> So far with GreenSync You have saved</p>
+                                <p class="text-success fs-3"><i class="fas fa-pound-sign"></i> 6.43</p>
+                                <p class="text-primary fs-3"><i class="fas fa-dumbbell text-muted me-2"></i> 240kgs of CO<sub>2</sub></p>
                             </div>
                         </div>
                     </div>
