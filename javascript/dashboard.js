@@ -58,8 +58,9 @@ function processDays(data) {
 
 function updateDayBoxes(days) {
     days.forEach((day, index) => {
-        const box = document.querySelector(`#box_${index + 1}`);
+        const box = document.querySelector(`#box_${index + 1} strong`);
         if (box) {
+            box.textContent = day.weekday;
             box.addEventListener('click', () => {
                 const ctx = document.getElementById('weatherChart').getContext('2d');
 
@@ -86,7 +87,6 @@ function createWeekChart(data) {
 }
 
 function createDayChart(data) {
-    console.log(data)
     const timeLabels = data[0]
     const estimated_energy = data[1]
     const wind_energy = data[2]
@@ -94,13 +94,12 @@ function createDayChart(data) {
     chartJSRun(timeLabels,estimated_energy,wind_energy,solar_energy)
 }
 
-
-
-let myChart; // Declare a global variable to hold the chart instance
+let myChart; 
 
 function chartJSRun(timeLabels, estimated_energy, solar_energy, wind_energy) {
     const ctx = document.getElementById('weatherChart').getContext('2d');
     // Check if a chart instance already exists
+
     if (myChart) {
         myChart.destroy(); // Destroy the existing chart instance
     }
