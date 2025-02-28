@@ -78,6 +78,15 @@ body::before {
     background-color: #1B5E20;
 }
 
+/* Map */
+#map {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+}
+
 /* Footer */
 .footer {
     background-color: #1B5E20;

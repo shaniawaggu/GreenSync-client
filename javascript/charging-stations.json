@@ -1,0 +1,205 @@
+[
+    {
+        "ev_location_id": 1,
+        "licence_area": "London",
+        "primary_name": "ABERDEEN PL A 11KV",
+        "latitude": "51.52543793",
+        "longitude": "-0.17457125"
+    },
+    {
+        "ev_location_id": 2,
+        "licence_area": "London",
+        "primary_name": "AMBERLEY RD 11KV",
+        "latitude": "51.52279470",
+        "longitude": "-0.19260918"
+    },
+    {
+        "ev_location_id": 3,
+        "licence_area": "London",
+        "primary_name": "BROADWAY",
+        "latitude": "51.45698013",
+        "longitude": "0.13661215"
+    },
+    {
+        "ev_location_id": 4,
+        "licence_area": "London",
+        "primary_name": "BROMLEY SOUTH",
+        "latitude": "51.39143917",
+        "longitude": "0.03768154"
+    },
+    {
+        "ev_location_id": 5,
+        "licence_area": "London",
+        "primary_name": "BULWER ST 11KV",
+        "latitude": "51.50558654",
+        "longitude": "-0.22343484"
+    },
+    {
+        "ev_location_id": 6,
+        "licence_area": "London",
+        "primary_name": "DURNSFORD RD",
+        "latitude": "51.43028908",
+        "longitude": "-0.19145717"
+    },
+    {
+        "ev_location_id": 7,
+        "licence_area": "London",
+        "primary_name": "EDWARDS LANE C",
+        "latitude": "51.56180188",
+        "longitude": "-0.08313163"
+    },
+    {
+        "ev_location_id": 8,
+        "licence_area": "London",
+        "primary_name": "ELTHAM GRID 11KV",
+        "latitude": "51.45968102",
+        "longitude": "0.07842161"
+    },
+    {
+        "ev_location_id": 9,
+        "licence_area": "London",
+        "primary_name": "EPPING NEW RD",
+        "latitude": "51.62713761",
+        "longitude": "0.02994870"
+    },
+    {
+        "ev_location_id": 10,
+        "licence_area": "London",
+        "primary_name": "FAIRLOP RD",
+        "latitude": "51.59318478",
+        "longitude": "0.08414969"
+    },
+    {
+        "ev_location_id": 11,
+        "licence_area": "London",
+        "primary_name": "FOREST HILL",
+        "latitude": "51.44715130",
+        "longitude": "-0.06101089"
+    },
+    {
+        "ev_location_id": 12,
+        "licence_area": "London",
+        "primary_name": "FULHAM PALACE RD C",
+        "latitude": "51.49063472",
+        "longitude": "-0.22182660"
+    },
+    {
+        "ev_location_id": 13,
+        "licence_area": "London",
+        "primary_name": "GORRINGE PARK",
+        "latitude": "51.41141613",
+        "longitude": "-0.15641041"
+    },
+    {
+        "ev_location_id": 14,
+        "licence_area": "London",
+        "primary_name": "HACKNEY C 6.6KV",
+        "latitude": "51.55844987",
+        "longitude": "-0.04080103"
+    },
+    {
+        "ev_location_id": 15,
+        "licence_area": "London",
+        "primary_name": "HOLLOWAY 11KV",
+        "latitude": "51.55251155",
+        "longitude": "-0.11581873"
+    },
+    {
+        "ev_location_id": 16,
+        "licence_area": "London",
+        "primary_name": "LITHOS RD A",
+        "latitude": "51.54880641",
+        "longitude": "-0.18598231"
+    },
+    {
+        "ev_location_id": 17,
+        "licence_area": "London",
+        "primary_name": "MERTON",
+        "latitude": "51.41015176",
+        "longitude": "-0.18951977"
+    },
+    {
+        "ev_location_id": 18,
+        "licence_area": "London",
+        "primary_name": "MONTFORD PL B 11KV",
+        "latitude": "51.48554561",
+        "longitude": "-0.11366895"
+    },
+    {
+        "ev_location_id": 19,
+        "licence_area": "London",
+        "primary_name": "SEWELL RD B 11KV",
+        "latitude": "51.49750861",
+        "longitude": "0.11242940"
+    },
+    {
+        "ev_location_id": 20,
+        "licence_area": "London",
+        "primary_name": "SILVERTOWN B 11KV",
+        "latitude": "51.50357514",
+        "longitude": "0.04361686"
+    },
+    {
+        "ev_location_id": 21,
+        "licence_area": "London",
+        "primary_name": "SIMPSONS ROAD",
+        "latitude": "51.50819934",
+        "longitude": "-0.01726332"
+    },
+    {
+        "ev_location_id": 22,
+        "licence_area": "London",
+        "primary_name": "TOWNMEAD B 11KV",
+        "latitude": "51.46837976",
+        "longitude": "-0.18610720"
+    },
+    {
+        "ev_location_id": 23,
+        "licence_area": "London",
+        "primary_name": "WANDSWORTH CENTRAL A",
+        "latitude": "51.45361274",
+        "longitude": "-0.19301118"
+    },
+    {
+        "ev_location_id": 24,
+        "licence_area": "London",
+        "primary_name": "WINLATON RD",
+        "latitude": "51.42731487",
+        "longitude": "-0.00114534"
+    },
+    {
+        "ev_location_id": 25,
+        "licence_area": "London",
+        "primary_name": "WEST NORWOOD",
+        "latitude": "51.43024631",
+        "longitude": "-0.10396397"
+    },
+    {
+        "ev_location_id": 26,
+        "licence_area": "London",
+        "primary_name": "ABERDEEN PL B 11KV",
+        "latitude": "51.52542175",
+        "longitude": "-0.17468722"
+    },
+    {
+        "ev_location_id": 27,
+        "licence_area": "London",
+        "primary_name": "AXE ST",
+        "latitude": "51.53576243",
+        "longitude": "0.07980945"
+    },
+    {
+        "ev_location_id": 28,
+        "licence_area": "London",
+        "primary_name": "BARKING WEST 11KV",
+        "latitude": "51.51613778",
+        "longitude": "0.10715116"
+    },
+    {
+        "ev_location_id": 29,
+        "licence_area": "London",
+        "primary_name": "BENGEWORTH RD 11KV",
+        "latitude": "51.46731219",
+        "longitude": "-0.09663998"
+    }
+] 
