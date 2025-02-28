@@ -19,7 +19,7 @@ let basemaps = {
 
 let map = L.map("map", {
     layers: [streets],
-    minZoom: 9,
+    minZoom: 7,
     maxZoom: 16,
     maxBounds: L.latLngBounds([[-90, -180], [90, 180]]),
 }).setView([51.5, -0.12], 11);
