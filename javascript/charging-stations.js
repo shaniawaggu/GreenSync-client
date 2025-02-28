@@ -59,3 +59,4 @@ fetch("javascript/charging-stations.json")
         map.addLayer(markers);
     })
     .catch(error => console.error("Error fetching charging stations:", error));
+

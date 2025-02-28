@@ -52,11 +52,21 @@
                         <i class="fas fa-map-marker-alt text-muted"></i>
                     </span>
                     <div class="form-floating flex-grow-1">
-                        <input type="text" class="form-control border-start-0" name="postcode" id="floatingPostcode" placeholder="Postcode" required>
+                        <input type="text" class="form-control border-start-0" name="postcode" id="floatingPostcode"
+                               placeholder="Postcode" required pattern="^[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}$"
+                               title="Enter a valid UK postcode (e.g., SE01 2UB)">
                         <label for="floatingPostcode">Postcode</label>
-                    </div>
+                    </div>                    
                 </div>
-                
+                <small class="text-muted d-block mb-3 text-start">
+                    Postcode must:
+                    <ul class="text-muted">
+                        <li>Be a valid UK postcode (e.g.,<strong> SW1A 1AA</strong>)</li>
+                        <li>Contain letters and numbers in the correct format</li>
+                        <li>Include a space between the outward and inward code (e.g., <strong>SW1A 1AA</strong>)</li>
+                        <li>Be in uppercase letters (e.g., <strong>SE01 2UB)</strong></li>
+                    </ul>
+                </small>                
                 <button class="btn btn-success w-100 py-2" type="submit">Sign Up</button>
                 <p class="mt-3 text-center">
                     <a href="index.html" class="link-primary"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
