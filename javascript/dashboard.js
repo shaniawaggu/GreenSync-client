@@ -1,418 +1,203 @@
-// Data from API 
-const data = {"hourly": {
-    "time": [
-      "2025-02-26T00:00",
-      "2025-02-26T01:00",
-      "2025-02-26T02:00",
-      "2025-02-26T03:00",
-      "2025-02-26T04:00",
-      "2025-02-26T05:00",
-      "2025-02-26T06:00",
-      "2025-02-26T07:00",
-      "2025-02-26T08:00",
-      "2025-02-26T09:00",
-      "2025-02-26T10:00",
-      "2025-02-26T11:00",
-      "2025-02-26T12:00",
-      "2025-02-26T13:00",
-      "2025-02-26T14:00",
-      "2025-02-26T15:00",
-      "2025-02-26T16:00",
-      "2025-02-26T17:00",
-      "2025-02-26T18:00",
-      "2025-02-26T19:00",
-      "2025-02-26T20:00",
-      "2025-02-26T21:00",
-      "2025-02-26T22:00",
-      "2025-02-26T23:00",
-      "2025-02-27T00:00",
-      "2025-02-27T01:00",
-      "2025-02-27T02:00",
-      "2025-02-27T03:00",
-      "2025-02-27T04:00",
-      "2025-02-27T05:00",
-      "2025-02-27T06:00",
-      "2025-02-27T07:00",
-      "2025-02-27T08:00",
-      "2025-02-27T09:00",
-      "2025-02-27T10:00",
-      "2025-02-27T11:00",
-      "2025-02-27T12:00",
-      "2025-02-27T13:00",
-      "2025-02-27T14:00",
-      "2025-02-27T15:00",
-      "2025-02-27T16:00",
-      "2025-02-27T17:00",
-      "2025-02-27T18:00",
-      "2025-02-27T19:00",
-      "2025-02-27T20:00",
-      "2025-02-27T21:00",
-      "2025-02-27T22:00",
-      "2025-02-27T23:00",
-      "2025-02-28T00:00",
-      "2025-02-28T01:00",
-      "2025-02-28T02:00",
-      "2025-02-28T03:00",
-      "2025-02-28T04:00",
-      "2025-02-28T05:00",
-      "2025-02-28T06:00",
-      "2025-02-28T07:00",
-      "2025-02-28T08:00",
-      "2025-02-28T09:00",
-      "2025-02-28T10:00",
-      "2025-02-28T11:00",
-      "2025-02-28T12:00",
-      "2025-02-28T13:00",
-      "2025-02-28T14:00",
-      "2025-02-28T15:00",
-      "2025-02-28T16:00",
-      "2025-02-28T17:00",
-      "2025-02-28T18:00",
-      "2025-02-28T19:00",
-      "2025-02-28T20:00",
-      "2025-02-28T21:00",
-      "2025-02-28T22:00",
-      "2025-02-28T23:00",
-      "2025-03-01T00:00",
-      "2025-03-01T01:00",
-      "2025-03-01T02:00",
-      "2025-03-01T03:00",
-      "2025-03-01T04:00",
-      "2025-03-01T05:00",
-      "2025-03-01T06:00",
-      "2025-03-01T07:00",
-      "2025-03-01T08:00",
-      "2025-03-01T09:00",
-      "2025-03-01T10:00",
-      "2025-03-01T11:00",
-      "2025-03-01T12:00",
-      "2025-03-01T13:00",
-      "2025-03-01T14:00",
-      "2025-03-01T15:00",
-      "2025-03-01T16:00",
-      "2025-03-01T17:00",
-      "2025-03-01T18:00",
-      "2025-03-01T19:00",
-      "2025-03-01T20:00",
-      "2025-03-01T21:00",
-      "2025-03-01T22:00",
-      "2025-03-01T23:00",
-      "2025-03-02T00:00",
-      "2025-03-02T01:00",
-      "2025-03-02T02:00",
-      "2025-03-02T03:00",
-      "2025-03-02T04:00",
-      "2025-03-02T05:00",
-      "2025-03-02T06:00",
-      "2025-03-02T07:00",
-      "2025-03-02T08:00",
-      "2025-03-02T09:00",
-      "2025-03-02T10:00",
-      "2025-03-02T11:00",
-      "2025-03-02T12:00",
-      "2025-03-02T13:00",
-      "2025-03-02T14:00",
-      "2025-03-02T15:00",
-      "2025-03-02T16:00",
-      "2025-03-02T17:00",
-      "2025-03-02T18:00",
-      "2025-03-02T19:00",
-      "2025-03-02T20:00",
-      "2025-03-02T21:00",
-      "2025-03-02T22:00",
-      "2025-03-02T23:00",
-      "2025-03-03T00:00",
-      "2025-03-03T01:00",
-      "2025-03-03T02:00",
-      "2025-03-03T03:00",
-      "2025-03-03T04:00",
-      "2025-03-03T05:00",
-      "2025-03-03T06:00",
-      "2025-03-03T07:00",
-      "2025-03-03T08:00",
-      "2025-03-03T09:00",
-      "2025-03-03T10:00",
-      "2025-03-03T11:00",
-      "2025-03-03T12:00",
-      "2025-03-03T13:00",
-      "2025-03-03T14:00",
-      "2025-03-03T15:00",
-      "2025-03-03T16:00",
-      "2025-03-03T17:00",
-      "2025-03-03T18:00",
-      "2025-03-03T19:00",
-      "2025-03-03T20:00",
-      "2025-03-03T21:00",
-      "2025-03-03T22:00",
-      "2025-03-03T23:00",
-      "2025-03-04T00:00",
-      "2025-03-04T01:00",
-      "2025-03-04T02:00",
-      "2025-03-04T03:00",
-      "2025-03-04T04:00",
-      "2025-03-04T05:00",
-      "2025-03-04T06:00",
-      "2025-03-04T07:00",
-      "2025-03-04T08:00",
-      "2025-03-04T09:00",
-      "2025-03-04T10:00",
-      "2025-03-04T11:00",
-      "2025-03-04T12:00",
-      "2025-03-04T13:00",
-      "2025-03-04T14:00",
-      "2025-03-04T15:00",
-      "2025-03-04T16:00",
-      "2025-03-04T17:00",
-      "2025-03-04T18:00",
-      "2025-03-04T19:00",
-      "2025-03-04T20:00",
-      "2025-03-04T21:00",
-      "2025-03-04T22:00",
-      "2025-03-04T23:00"
-    ],
-    "cloud_cover": [
-      100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 98, 100, 100, 100, 100,
-      100, 100, 99, 100, 97, 78, 86, 78, 91, 90, 75, 57, 42, 56, 100, 100, 100,
-      100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 26,
-      0, 18, 61, 29, 100, 100, 100, 100, 100, 100, 100, 93, 79, 79, 89, 80, 49,
-      35, 33, 37, 52, 56, 58, 60, 100, 100, 99, 95, 95, 93, 97, 100, 95, 100,
-      100, 100, 85, 95, 94, 92, 91, 88, 85, 82, 55, 27, 0, 2, 5, 7, 29, 52, 74,
-      81, 87, 94, 91, 88, 85, 89, 94, 98, 91, 85, 78, 77, 77, 76, 61, 46, 31,
-      21, 10, 0, 0, 0, 0, 5, 11, 16, 48, 59, 69, 46, 23, 0, 0, 0, 0, 11, 21, 32,
-      49, 66, 83, 85, 87, 89, 93, 96, 100, 71, 43, 14, 9, 5, 0, 0, 0, 0, 1, 3,
-      4, 35, 65, 96, 77, 58, 39, 35, 32
-    ],
-    "wind_speed_120m": [
-      15.6, 17.7, 22.5, 19.1, 18.9, 18.8, 18.9, 14.8, 13.6, 7.2, 10.0, 11.8,
-      8.1, 8.4, 10.3, 9.4, 8.6, 20.7, 20.3, 20.7, 17.1, 18.2, 17.2, 18.2, 16.3,
-      13.8, 17.1, 16.6, 12.2, 13.7, 17.4, 19.0, 18.1, 16.0, 12.4, 16.3, 24.3,
-      22.4, 24.4, 20.8, 14.3, 13.0, 11.9, 11.5, 12.9, 15.0, 14.8, 10.8, 11.0,
-      9.5, 9.0, 7.5, 6.5, 6.6, 3.9, 3.0, 4.5, 3.7, 3.9, 4.8, 6.5, 9.1, 12.1,
-      8.3, 8.8, 8.7, 13.1, 20.9, 20.9, 20.8, 18.0, 21.8, 19.5, 21.5, 23.8, 22.7,
-      24.6, 19.6, 21.3, 23.1, 24.3, 19.5, 23.1, 12.1, 15.1, 17.7, 21.5, 24.3,
-      24.6, 23.3, 21.9, 20.6, 19.7, 18.8, 16.1, 12.6, 10.4, 9.7, 10.3, 10.8,
-      10.9, 10.9, 10.5, 8.4, 6.0, 4.3, 3.4, 4.6, 5.5, 4.2, 1.6, 0.8, 1.9, 3.1,
-      3.9, 3.3, 3.5, 4.6, 5.1, 5.6, 6.0, 6.8, 8.0, 9.3, 11.1, 13.3, 14.8, 23.8,
-      18.7, 14.2, 11.9, 10.7, 10.2, 10.1, 10.9, 12.5, 15.3, 18.4, 20.3, 20.1,
-      19.4, 17.7, 13.8, 8.8, 4.7, 3.6, 5.5, 8.0, 10.4, 13.0, 14.6, 15.0, 15.4,
-      15.6, 14.6, 14.1, 15.2, 16.2, 18.6, 22.2, 24.5, 26.4, 28.7, 31.1, 33.7,
-      35.4, 35.9, 35.8
-    ],
-    "direct_normal_irradiance": [
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.9, 59.0, 37.9, 18.7, 6.6,
-      2.6, 7.8, 4.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 36.6, 73.1, 173.9, 364.1, 248.7, 217.5, 49.0, 2.6, 3.1,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.0, 6.9, 2.2,
-      23.0, 56.3, 98.2, 197.6, 261.3, 289.9, 328.5, 359.9, 285.1, 35.4, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.7, 17.9,
-      11.6, 39.2, 96.6, 228.3, 191.0, 111.3, 49.6, 40.4, 34.4, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 76.5, 108.7, 108.6,
-      102.4, 95.4, 102.9, 142.6, 197.8, 224.2, 190.6, 66.8, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 74.8, 72.2, 109.7, 253.8,
-      453.7, 604.7, 667.1, 679.0, 647.6, 548.9, 216.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 41.9, 364.5, 443.0, 461.8, 534.2,
-      634.9, 702.6, 720.9, 706.0, 655.9, 550.2, 220.9, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0
-    ]
-  }
-}
+window.addEventListener('DOMContentLoaded', fetchData);
 
-const weekdays = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
-
-const dayOne = {
-    date: data.hourly.time[1].split('T')[0],
-    windSpeed: data.hourly.wind_speed_120m.slice(0,24),
-    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(0,24),
-}
-const dateOne = new Date(dayOne.date)
-const weekdayOne = weekdays[dateOne.getDay()]
-
-const dayTwo = {
-    date: data.hourly.time[24].split('T')[0],
-    windSpeed: data.hourly.wind_speed_120m.slice(24,48),
-    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(24,48),
-}
-
-const dateTwo = new Date(dayTwo.date)
-const weekdayTwo = weekdays[dateTwo.getDay()]
-
-const dayThree = {
-    date: data.hourly.time[48].split('T')[0],
-    windSpeed: data.hourly.wind_speed_120m.slice(48,72),
-    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(48,72),
-}
-
-const dateThree = new Date(dayThree.date)
-const weekdayThree = weekdays[dateThree.getDay()]
-
-const dayFour= {
-    date: data.hourly.time[72].split('T')[0],
-    windSpeed: data.hourly.wind_speed_120m.slice(72,96),
-    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(72,96),
-}
-
-const dateFour = new Date(dayFour.date)
-const weekdayFour = weekdays[dateFour.getDay()]
-
-const dayFive = {
-    date: data.hourly.time[96].split('T')[0],
-    windSpeed: data.hourly.wind_speed_120m.slice(96,120),
-    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(96,120),
-}
-
-const dateFive = new Date(dayFive.date)
-const weekdayFive = weekdays[dateFive.getDay()]
-
-const daySix = {
-    date: data.hourly.time[120].split('T')[0],
-    windSpeed: data.hourly.wind_speed_120m.slice(120,144),
-    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(124,144),
-}
-
-const dateSix = new Date(daySix.date)
-const weekdaySix = weekdays[dateSix.getDay()]
-
-const daySeven = {
-    date: data.hourly.time[144].split('T')[0],
-    windSpeed: data.hourly.wind_speed_120m.slice(144,168),
-    direct_normal_irradiance: data.hourly.direct_normal_irradiance.slice(142,168),
-}
-
-const dateSeven = new Date(daySeven.date)
-const weekdaySeven = weekdays[dateSeven.getDay()]
-
-const timeLabels = data.hourly.time.map((t) => new Date(t).toLocaleString('en-GB', {
-    day: '2-digit', month: '2-digit', hour: '2-digit'
-}));
-
-// use Chart object to create chart called weatherChart
-
-
-
-window.addEventListener('DOMContentLoaded', fetch)
-
-async function fetch() {
+async function fetchData() {
     try {
-        const response = await fetch(`http://localhost:3000/forecasts/`)
+        const response = await fetch(`http://localhost:3000/forecasts/`);
         if (response.ok) {
-            const data = await response.json()
-            console.log(data)
-            create(data)
-            console.log(data)
+            const data = await response.json();
+            const hourlyData = convertToHourlyData(data);
+            const dayArray = processDays(hourlyData);
+            updateDayBoxes(dayArray);
+            createWeekChart(hourlyData);
         } else {
-            throw "Error http status code " + response.status
+            throw new Error("HTTP status code: " + response.status);
         }
     } catch (err) {
-        console.log(err)
+        console.error(err);
     }
 }
 
-function createChart(){
-    const cloudCoverData = data.hourly.cloud_cover;
-    const directRadiationData = data.hourly.direct_normal_irradiance;
-    const windSpeed = data.hourly.wind_speed_120m;
-
-    const ctx = document.getElementById('weatherChart').getContext('2d');
-    const weatherChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: timeLabels,
-        datasets: [
-            // {
-            //     label: 'Cloud Cover (%)',
-            //     data: cloudCoverData,
-            //     borderColor: 'rgba(75, 192, 192, 1)',
-            //     backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            //     borderWidth: 1,
-            //     tension: 0.7, // Smooth lines
-            //     yAxisID: 'y1',
-            //     pointRadius: 0.1,
-            // },
-            {
-                label: 'Direct Radiation (W/m²)',
-                data: directRadiationData,
-                borderColor: 'rgba(255, 99, 132, 1)',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderWidth: 3,
-                tension: 0.4, 
-                yAxisID: 'y2',
-                pointRadius: 0.2, 
-            },
-            {
-                label: 'Wind Speed (km/h)',
-                data: windSpeed,
-                borderColor: 'rgba(123, 99, 132, 1)',
-                backgroundColor: 'rgba(123, 99, 132, 0.2)',
-                borderWidth: 2,
-                tension: 0.4,
-                yAxisID: 'y3',
-                pointRadius: 0.2,
-            },
-        ],
-    },
-    options: {
-        responsive: true,
-        scales: {
-            // y1: {
-            //     type: 'linear',
-            //     position: 'left',
-            //     title: {
-            //         display: true,
-            //         text: 'Cloud Cover (%)',
-            //     },
-            //     ticks: {
-            //         beginAtZero: true,
-            //     },
-            // },
-            y2: {
-                type: 'linear',
-                position: 'right',
-                title: {
-                    display: true,
-                    text: 'Direct Radiation (W/m²)',
-                },
-                ticks: {
-                    beginAtZero: true,
-                },
-            },
-            y3: {
-                type: 'linear',
-                position: 'left',
-                title: {
-                    display: true,
-                    text: 'Wind Speed (km/h)',
-                },
-                ticks: {
-                    beginAtZero: true,
-                },
-            },
-            x: {
-                title: {
-                    display: true,
-                    text: 'Date',
-                },
-            },
-        },
-        plugins: {
-            tooltip: {
-                mode: 'index',
-                intersect: true,
-            },
-            legend: {
-                position: 'top',
-            },
-        },
-    },
-});
+function convertToHourlyData(inputData) {
+    return {
+        "hourly": {
+            "time": inputData.map(entry => entry.dateandtime),
+            "estimated_energy": inputData.map(entry => parseFloat(entry.estimatedenergy)),
+            "wind_energy": inputData.map(entry => parseFloat(entry.windenergy)),
+            "solar_energy": inputData.map(entry => parseFloat(entry.solarenergy))
+        }
+    };
 }
 
-createChart()
+const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const box_1 = document.querySelector('#box_1 strong').textContent = weekdayOne
-const box_2 = document.querySelector('#box_2 strong').textContent = weekdayTwo
-const box_3 = document.querySelector('#box_3 strong').textContent = weekdayThree
-const box_4 = document.querySelector('#box_4 strong').textContent = weekdayFour
-const box_5 = document.querySelector('#box_5 strong').textContent = weekdayFive
-const box_6 = document.querySelector('#box_6 strong').textContent = weekdaySix
-const box_7 = document.querySelector('#box_7 strong').textContent = weekdaySeven
+function processDays(data) {
+    const days = [];
 
+    for (let i = 0; i < 7; i++) {
+        const startIndex = i * 24;
+        const endIndex = startIndex + 24;
+
+        const date = data.hourly.time[startIndex].split('T')[0];
+        const estimatedenergy = data.hourly.estimated_energy.slice(startIndex, endIndex); 
+        const windSpeed = data.hourly.wind_energy.slice(startIndex, endIndex); 
+        const directNormalIrradiance = data.hourly.solar_energy.slice(startIndex, endIndex); 
+        const weekday = weekdays[new Date(date).getDay()];
+        const timeLabels = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+
+        days.push({
+            date,
+            estimatedenergy,
+            windSpeed,
+            directNormalIrradiance,
+            weekday,
+            timeLabels
+        });
+    }
+    return days;
+}
+
+function updateDayBoxes(days) {
+    days.forEach((day, index) => {
+        const box = document.querySelector(`#box_${index + 1}`);
+        if (box) {
+            box.addEventListener('click', () => {
+                const ctx = document.getElementById('weatherChart').getContext('2d');
+
+                // Pass the data for the clicked day to update the chart
+                createDayChart([
+                    day.timeLabels,
+                    day.estimatedenergy,
+                    day.directNormalIrradiance,
+                    day.windSpeed
+                ]);
+            });
+        }
+    });
+}
+
+function createWeekChart(data) {
+    const timeLabels = data.hourly.time.map((t) => new Date(t).toLocaleString('en-GB', {
+        day: '2-digit', month: '2-digit', hour: '2-digit'
+    }));
+    const estimated_energy = data.hourly.estimated_energy;
+    const wind_energy = data.hourly.wind_energy;
+    const solar_energy = data.hourly.solar_energy;
+    chartJSRun(timeLabels,estimated_energy,wind_energy,solar_energy)
+}
+
+function createDayChart(data) {
+    console.log(data)
+    const timeLabels = data[0]
+    const estimated_energy = data[1]
+    const wind_energy = data[2]
+    const solar_energy = data[3]
+    chartJSRun(timeLabels,estimated_energy,wind_energy,solar_energy)
+}
+
+
+
+let myChart; // Declare a global variable to hold the chart instance
+
+function chartJSRun(timeLabels, estimated_energy, solar_energy, wind_energy) {
+    const ctx = document.getElementById('weatherChart').getContext('2d');
+    // Check if a chart instance already exists
+    if (myChart) {
+        myChart.destroy(); // Destroy the existing chart instance
+    }
+
+    // Create a new chart instance
+    myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: timeLabels,
+            datasets: [
+                {
+                    label: 'Estimated Energy (%)',
+                    data: estimated_energy,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 1,
+                    tension: 0.7,
+                    yAxisID: 'y1',
+                    pointRadius: 0.1,
+                    fill: {
+                        target: 'origin',
+                    }
+                },
+                {
+                    label: 'Solar Energy (W/m²)',
+                    data: solar_energy,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    yAxisID: 'y2',
+                    pointRadius: 0.2,
+                },
+                {
+                    label: 'Wind Energy (km/h)',
+                    data: wind_energy,
+                    borderColor: 'rgba(123, 99, 132, 1)',
+                    backgroundColor: 'rgba(123, 99, 132, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    yAxisID: 'y3',
+                    pointRadius: 0.2,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y1: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Estimated Energy (%)',
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                },
+                y2: {
+                    type: 'linear',
+                    position: 'right',
+                    title: {
+                        display: true,
+                        text: 'Solar Energy (W/m²)',
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                },
+                y3: {
+                    type: 'linear',
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Wind Energy (km/h)',
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Date',
+                    },
+                },
+            },
+            plugins: {
+                tooltip: {
+                    mode: 'index',
+                    intersect: true,
+                },
+                legend: {
+                    position: 'top',
+                },
+            },
+        },
+    });
+}
