@@ -34,32 +34,6 @@ let chargingIcon = L.ExtraMarkers.icon({
     prefix: "fa"
 });
 
-// Fetch local JSON file containing charging stations
-// fetch("javascript/charging-stations.json")
-//     .then(response => response.json())
-//     .then(data => {
-//         let markers = L.markerClusterGroup();
-        
-//         data.forEach(station => {
-//             if (station.latitude && station.longitude) {
-//                 let marker = L.marker([parseFloat(station.latitude), parseFloat(station.longitude)], { icon: chargingIcon });
-//                 marker.bindPopup(`<b>${station.primary_name}</b><br>Location: ${station.licence_area}`);
-//                 marker.on('mouseover', function (e) {
-//                     this.openPopup();
-//                 });
-//                 marker.on('mouseout', function (e) {
-//                     this.closePopup();
-//                 });
-//                 markers.addLayer(marker);
-//             } else {
-//                 console.warn("Skipping station due to missing latitude or longitude:", station);
-//             }
-//         });
-        
-//         map.addLayer(markers);
-//     })
-//     .catch(error => console.error("Error fetching charging stations:", error));
-
 async function loadChargingStations() {
     const userId = localStorage.getItem("id");
 
@@ -89,10 +63,9 @@ async function loadChargingStations() {
         }
 
         // Step 2: Fetch latitude/longitude from Postcodes.io API
-        // const postcodeResponse = await fetch(`https://api.postcodes.io/postcodes/${userPostcode.replace(/\s+/g, '')}`);
-        // if (!postcodeResponse.ok) throw new Error("Failed to fetch postcode data");
+        const postcodeResponse = await fetch(`https://api.postcodes.io/postcodes/${userPostcode.replace(/\s+/g, '')}`);
+        if (!postcodeResponse.ok) throw new Error("Failed to fetch postcode data");
 
-        const postcodeResponse = await fetch(`https://api.postcodes.io/postcodes/SE187BE`);
 
         const postcodeData = await postcodeResponse.json();
         const userLatitude = postcodeData.result.latitude;
@@ -143,3 +116,31 @@ async function loadChargingStations() {
 
 // Call function when page loads
 loadChargingStations();
+
+
+
+// Fetch local JSON file containing charging stations
+// fetch("javascript/charging-stations.json")
+//     .then(response => response.json())
+//     .then(data => {
+//         let markers = L.markerClusterGroup();
+        
+//         data.forEach(station => {
+//             if (station.latitude && station.longitude) {
+//                 let marker = L.marker([parseFloat(station.latitude), parseFloat(station.longitude)], { icon: chargingIcon });
+//                 marker.bindPopup(`<b>${station.primary_name}</b><br>Location: ${station.licence_area}`);
+//                 marker.on('mouseover', function (e) {
+//                     this.openPopup();
+//                 });
+//                 marker.on('mouseout', function (e) {
+//                     this.closePopup();
+//                 });
+//                 markers.addLayer(marker);
+//             } else {
+//                 console.warn("Skipping station due to missing latitude or longitude:", station);
+//             }
+//         });
+        
+//         map.addLayer(markers);
+//     })
+//     .catch(error => console.error("Error fetching charging stations:", error));
