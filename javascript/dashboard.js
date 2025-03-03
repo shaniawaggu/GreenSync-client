@@ -68,8 +68,8 @@ function updateDayBoxes(days) {
                 createDayChart([
                     day.timeLabels,
                     day.estimatedenergy,
-                    day.directNormalIrradiance,
-                    day.windSpeed
+                    day.windSpeed,
+                    day.directNormalIrradiance
                 ]);
             });
         }
@@ -77,9 +77,12 @@ function updateDayBoxes(days) {
 }
 
 function createWeekChart(data) {
-    const timeLabels = data.hourly.time.map((t) => new Date(t).toLocaleString('en-GB', {
-        day: '2-digit', month: '2-digit', hour: '2-digit'
-    }));
+    const timeLabels = data.hourly.time.map((t) => {
+        const date = new Date(t);
+        const dayName = date.toLocaleDateString('en-GB', { weekday: 'short' }); // Get the full day name
+        const hour = date.toLocaleTimeString('en-GB', { hour: '2-digit'}); // Get the hour and minute
+        return `${dayName}, ${hour.split(":")[0]+"h"}`; // Combine day name and hour
+    });
     const estimated_energy = data.hourly.estimated_energy;
     const wind_energy = data.hourly.wind_energy;
     const solar_energy = data.hourly.solar_energy;
@@ -87,6 +90,7 @@ function createWeekChart(data) {
 }
 
 function createDayChart(data) {
+    console.log(data)
     const timeLabels = data[0]
     const estimated_energy = data[1]
     const wind_energy = data[2]
@@ -96,7 +100,7 @@ function createDayChart(data) {
 
 let myChart; 
 
-function chartJSRun(timeLabels, estimated_energy, solar_energy, wind_energy) {
+function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
     const ctx = document.getElementById('weatherChart').getContext('2d');
     // Check if a chart instance already exists
 
@@ -115,10 +119,10 @@ function chartJSRun(timeLabels, estimated_energy, solar_energy, wind_energy) {
                     data: estimated_energy,
                     borderColor: 'rgba(75, 192, 192, 1)',
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 1,
+                    borderWidth: 3,
                     tension: 0.7,
                     yAxisID: 'y1',
-                    pointRadius: 0.1,
+                    pointRadius: 1,
                     fill: {
                         target: 'origin',
                     }
@@ -128,17 +132,17 @@ function chartJSRun(timeLabels, estimated_energy, solar_energy, wind_energy) {
                     data: solar_energy,
                     borderColor: 'rgba(255, 99, 132, 1)',
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderWidth: 3,
+                    borderWidth: 2,
                     tension: 0.4,
                     yAxisID: 'y2',
                     pointRadius: 0.2,
                 },
                 {
-                    label: 'Wind Energy (km/h)',
+                    label: 'Wind Energy (km/)',
                     data: wind_energy,
                     borderColor: 'rgba(123, 99, 132, 1)',
                     backgroundColor: 'rgba(123, 99, 132, 0.2)',
-                    borderWidth: 2,
+                    borderWidth: 1.5,
                     tension: 0.4,
                     yAxisID: 'y3',
                     pointRadius: 0.2,
@@ -173,6 +177,7 @@ function chartJSRun(timeLabels, estimated_energy, solar_energy, wind_energy) {
                 y3: {
                     type: 'linear',
                     position: 'left',
+                    display: false,
                     title: {
                         display: true,
                         text: 'Wind Energy (km/h)',
