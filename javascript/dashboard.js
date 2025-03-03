@@ -9,6 +9,7 @@ async function fetchData() {
             const dayArray = processDays(hourlyData);
             updateDayBoxes(dayArray);
             createWeekChart(hourlyData);
+            updateMaxEnergy(dayArray)
         } else {
             throw new Error("HTTP status code: " + response.status);
         }
@@ -62,8 +63,6 @@ function updateDayBoxes(days) {
         if (box) {
             box.textContent = day.weekday;
             box.addEventListener('click', () => {
-                const ctx = document.getElementById('weatherChart').getContext('2d');
-
                 // Pass the data for the clicked day to update the chart
                 createDayChart([
                     day.timeLabels,
@@ -76,6 +75,35 @@ function updateDayBoxes(days) {
     });
 }
 
+function updateMaxEnergy(days){
+    days.forEach((day, index) => {
+        const parentBox = document.querySelector(`#box_${index + 1}`);
+        const box = document.querySelector(`#box_${index + 1} p`);
+        if (box) {
+            let max = 0
+            for (i in day.estimatedenergy){
+                if (day.estimatedenergy[i] > max) {
+                    max = day.estimatedenergy[i]
+                }
+            box.textContent = "Estimated MW " + Math.round(max)
+            if (max > 500){
+                box.style.color = "green"
+            } else if ( max < 500 && max > 250){
+                box.style.color = "darkorange"
+            } else {
+                box.style.color = "red"
+            }
+            
+            }
+        }
+    })
+}
+
+const weeklyButton = document.querySelector('#box_8').addEventListener('click',fetchData)
+
+// Send data to the CREATE chart functions.
+
+// Initalise the x and y axis to variables
 function createWeekChart(data) {
     const timeLabels = data.hourly.time.map((t) => {
         const date = new Date(t);
@@ -89,6 +117,7 @@ function createWeekChart(data) {
     chartJSRun(timeLabels,estimated_energy,wind_energy,solar_energy)
 }
 
+// Initalise the x and y axis to variables
 function createDayChart(data) {
     console.log(data)
     const timeLabels = data[0]
@@ -101,9 +130,11 @@ function createDayChart(data) {
 let myChart; 
 
 function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
+    
+    // Chart JS syntax
     const ctx = document.getElementById('weatherChart').getContext('2d');
-    // Check if a chart instance already exists
 
+    // Check if a chart instance already exists via myChart;
     if (myChart) {
         myChart.destroy(); // Destroy the existing chart instance
     }
