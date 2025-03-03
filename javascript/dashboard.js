@@ -61,7 +61,7 @@ function updateDayBoxes(days) {
     days.forEach((day, index) => {
         const box = document.querySelector(`#box_${index + 1} strong`);
         if (box) {
-            box.textContent = day.weekday;
+            box.textContent = day.weekday + " " + day.date.split("-")[2] + " March"
             box.addEventListener('click', () => {
                 // Pass the data for the clicked day to update the chart
                 createDayChart([
@@ -77,7 +77,6 @@ function updateDayBoxes(days) {
 
 function updateMaxEnergy(days){
     days.forEach((day, index) => {
-        const parentBox = document.querySelector(`#box_${index + 1}`);
         const box = document.querySelector(`#box_${index + 1} p`);
         if (box) {
             let max = 0
@@ -93,7 +92,6 @@ function updateMaxEnergy(days){
             } else {
                 box.style.color = "red"
             }
-            
             }
         }
     })
