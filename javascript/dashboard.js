@@ -1,8 +1,10 @@
 window.addEventListener('DOMContentLoaded', fetchData);
 
+// FETCH DATA FROM API for FORECAST DATA
+
 async function fetchData() {
     try {
-        const response = await fetch(`http://localhost:3000/forecasts/`);
+        const response = await fetch(`http://131.145.0.127:3000/forecasts`);
         if (response.ok) {
             const data = await response.json();
             const hourlyData = convertToHourlyData(data);
@@ -18,6 +20,8 @@ async function fetchData() {
     }
 }
 
+// CONVERTS TO DIFFERENT FORMAT OF ARRAYS
+
 function convertToHourlyData(inputData) {
     return {
         "hourly": {
@@ -31,6 +35,8 @@ function convertToHourlyData(inputData) {
 
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
+// CONVERTS 7 DAYS TO ONE DAY BY ITERATING OVER 24 HOURS 
+
 function processDays(data) {
     const days = [];
 
@@ -42,7 +48,7 @@ function processDays(data) {
         const estimatedenergy = data.hourly.estimated_energy.slice(startIndex, endIndex); 
         const windSpeed = data.hourly.wind_energy.slice(startIndex, endIndex); 
         const directNormalIrradiance = data.hourly.solar_energy.slice(startIndex, endIndex); 
-        const weekday = weekdays[new Date(date).getDay()];
+        const weekday = weekdays[new Date(date).getDay()-1];
         const timeLabels = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
 
         days.push({
@@ -61,7 +67,10 @@ function updateDayBoxes(days) {
     days.forEach((day, index) => {
         const box = document.querySelector(`#box_${index + 1} strong`);
         if (box) {
-            box.textContent = day.weekday + " " + day.date.split("-")[2] + " March"
+            box.textContent = day.weekday + " " + (day.date).split("-")[2] + " March"
+            if (day.weekday == undefined){
+                box.textContent = "Sunday" + " " + (day.date).split("-")[2] + " March"
+            }
             box.addEventListener('click', () => {
                 // Pass the data for the clicked day to update the chart
                 createDayChart([
@@ -92,7 +101,7 @@ function updateMaxEnergy(days){
             } else {
                 box.style.color = "red"
             }
-            }
+            }        
         }
     })
 }
@@ -234,3 +243,41 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
         },
     });
 }
+window.addEventListener('DOMContentLoaded', fetchOptimalPoints)
+
+async function fetchOptimalPoints() {
+    try {
+        const response = await fetch(`http://131.145.0.127:3000/forecasts/optimal-windows`);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data)
+            updateOptimalPoints(data)
+        } else {
+            throw new Error("HTTP status code: " + response.status);
+        }
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+function updateOptimalPoints(data){
+    
+    weekdays.forEach((day, index) => {
+        const dayElement = document.querySelector(`#days_${index+1}`);
+            if (dayElement) {
+                dayElement.textContent = `${day} ${data[day].startTime.split("T")[1]}`;
+                dayElement.nextElementSibling.textContent = data[day].score.toFixed(3);
+                if (data[day].score > 0.1) {
+                    dayElement.nextElementSibling.style.backgroundColor = "lightgreen"
+                    dayElement.nextElementSibling.style.color = "black"
+                } else if (data[day].score < 0.02 && data[day].score < 0.99) {
+                    dayElement.nextElementSibling.style.backgroundColor = "salmon"
+                    dayElement.nextElementSibling.style.opacity = "0.8"
+                    dayElement.nextElementSibling.style.color = "black"
+                }    
+            }
+        });
+    }
+    
+
+

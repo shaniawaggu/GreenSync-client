@@ -95,17 +95,51 @@
                         </div>
                         <!-- Second Box -->
                         <div class="card shadow-lg h-100">
-                            <div class="card-header bg-primary text-white"><i class="fas fa-charging-station me-2"></i> Charging Patterns</div>
-                            <div class="card-body d-flex flex-column fs-4 mt-4">        
-                                <p class="fs-5 text-center text-primary underline">Best days to charge your car to the MAX</p>
-                                <p class="text-center text-danger fs-6">>>Avoiding peak demand times</p>
-                                <p class="text-center">Monday 7am to 12pm</p>
-                                <p class="text-center">Tuesday 10am to 1pm</p>
-                                <p class="text-center">Wednesday won't be great</p>
-                                <p class="text-center">Friday 4am to 10am</p>
-                                <p class="text-center">Sunday 6am to 3pm</p>
+                            <div class="card-header bg-primary text-white">
+                                <i class="fas fa-charging-station me-2"></i>Best days to charge your car to the MAX
+                            </div>
+                            <div class="card-body d-flex flex-column fs-6 mt-2">
+                                <table class="table table-bordered text-center mt-1">
+                                    <thead>
+                                        <tr class="bg-light">
+                                            <th class="fs-8">Start of Three Hour Charge</th>
+                                            <th class="fs-8">Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fs-8" id="days_1">Monday</td>
+                                            <td class="fs-8" >7am - 12pm</td>
+                                        </tr>
+                                        <tr id="Tuesday">
+                                            <td class="fs-8" id="days_2">Tuesday</td>
+                                            <td class="fs-8">10am - 1pm</td>
+                                        </tr>
+                                        <tr id="Wednesday">
+                                            <td class="fs-8" id="days_3" >Wednesday</td>
+                                            <td class="fs-8">Won't be great</td>
+                                        </tr>
+                                        <tr id="Thursday">
+                                            <td class="fs-8" id="days_4">Thursday</td>
+                                            <td class="fs-8">-</td>
+                                        </tr>
+                                        <tr id="Friday">
+                                            <td class="fs-8" id="days_5">Friday</td>
+                                            <td class="fs-8">4am - 10am</td>
+                                        </tr>
+                                        <tr id="Saturday">
+                                            <td class="fs-8" id="days_6">Saturday</td>
+                                            <td class="fs-8" >-</td>
+                                        </tr>
+                                        <tr id="Sunday">
+                                            <td class="fs-8" id="days_7">Sunday</td>
+                                            <td class="fs-8">6am - 3pm</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
+                        
                     </div>
 
                     <!-- Energy Usage Col -->
