@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    background: linear-gradient(to bottom, #4C2C72, #9CE37D);
+    background: linear-gradient(to bottom, #d8f6de, #669452);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,12 +19,12 @@ body {
     box-shadow: none;
 }
 .navbar .navbar-brand {
-    color: white;
+    color: #155325;
     font-size: 1.5rem;
     font-weight: bold;
 }
 .navbar .nav-link {
-    color: white !important;
+    color: #155325 !important;
     font-size: 1rem;
     transition: color 0.3s;
 }
