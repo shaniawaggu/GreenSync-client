@@ -29,26 +29,91 @@
         </div>
     </nav>      
 
-    
     <div class="container mt-5">
         <div class="row">
+            <!-- EV Tips -->
             <div class="col-md-4">
-                <div class="p-4 shadow-sm bg-light rounded">
-                    <h4 class="fw-bold text-success">Off-Peak Rates</h4>
-                    <p>Information about off-peak rates in your area will be displayed here.</p>
+                <div class="card shadow-lg">
+                    <div class="card-header bg-success text-white fw-bold">
+                        <h5 class="mb-0 fw-bold">EV Tips</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>- Optimize your EV charging by utilizing off-peak hours to save money.</p>
+                        <p>- Regularly check your tire pressure to maximize efficiency.</p>
+                        <p>- Plan longer trips in advance to ensure charger availability.</p>
+                    </div>
                 </div>
             </div>
             
+            <!-- Energy Rates Across UK -->
             <div class="col-md-8">
-                <div class="p-4 shadow-sm bg-light rounded">
-                    <h4 class="fw-bold text-success">30day Energy chart</h4>
-                    <table class="table table-bordered table-striped">
-                        
-                    </table>
+                <div class="card shadow-lg">
+                    <div class="card-header bg-success fw-bold text-white">
+                        <h5 class="mb-0 fw-bold">Energy Rates Across UK</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Current electricity prices for different regions.</p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Region</th>
+                                    <th>Rate (p/kWh)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>London</td><td>8.5p</td></tr>
+                                <tr><td>East England</td><td>8.2p</td></tr>
+                                <tr><td>South East England</td><td>7.9p</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- EV Tariff Comparison -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0 fw-bold">EV Tariff Comparison</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Compare off-peak and peak rates from leading EV energy providers.</p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Provider</th>
+                                    <th>Peak Rate (p/kWh)</th>
+                                    <th>Off-Peak Rate (p/kWh)</th>
+                                    <th>Standing Charge (p/day)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://octopus.energy/go/" target="_blank">Octopus Go</a></td>
+                                    <td>30p</td>
+                                    <td>7.5p</td>
+                                    <td>25p</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.edfenergy.com/electric-cars/tariffs" target="_blank">EDF EV Tariff</a></td>
+                                    <td>32p</td>
+                                    <td>8p</td>
+                                    <td>27p</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.eonenergy.com/ev/next-drive.html" target="_blank">E.ON Next Drive</a></td>
+                                    <td>31p</td>
+                                    <td>7.8p</td>
+                                    <td>26p</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </body>
 </html>

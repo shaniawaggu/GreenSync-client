@@ -74,24 +74,24 @@ body::before {
 
 .navbar-nav .nav-link {
     font-size: 1rem;
-    color: #43A047 !important; /* Green Color for Links */
+    color: #43A047 !important; 
     transition: color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #4C2C72 !important; /* Darker Hover Effect */
+    color: #4C2C72 !important; 
 }
 
 .navbar-nav .nav-item .text-danger {
-    color: #1e5421 !important; /* Darker Green for Logout */
+    color: #1e5421 !important; 
 }
 
 .navbar-nav .nav-item .text-danger:hover {
-    color: #4C2C72 !important; /* Darker Hover Effect */
+    color: #4C2C72 !important; 
 }
 
 .container-fluid {
-    /* margin-top: 150px; Increased space to avoid overlap with navbar */
+    /* margin-top: 150px; 
     padding: 13px;
     /* flex-grow: 1; */
     width: 98%;
