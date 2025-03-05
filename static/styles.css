@@ -13,6 +13,7 @@ body {
 /* Semi-Transparent Overlay */
 body::before {
     content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -94,13 +95,4 @@ footer {
 .forecast-box:hover{
     cursor: pointer;
     background-color: #2E7D32;
-}
-
-footer {
-    width: 100%;
-    background-color: #155325;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    margin-top: 20px;
 }
