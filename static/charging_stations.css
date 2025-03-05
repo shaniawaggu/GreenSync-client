@@ -1,7 +1,9 @@
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #d8f6de, #115f13);
-    background-attachment: fixed; /* Ensures gradient scrolls with page */
+    background: url('../assets/background1.png') no-repeat center center/cover;
+    background-size: cover;
+    /* background: linear-gradient(to bottom, #d8f6de, #115f13); */
+    background-attachment: fixed; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
