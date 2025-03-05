@@ -1,75 +1,145 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #d8f6de, #115f13);
+    background-attachment: fixed; /* Ensures gradient scrolls with page */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     margin: 0;
-    padding: 0;
-    height: 100%;
-    position: relative;
-    background: url('../assets/background1.png') no-repeat center center/cover;
-    background-size: cover;
+    font-family: 'Arial', sans-serif;
     color: #333;
+    padding-top: 50px; /* Pushes all content below navbar dynamically */
 }
 
-/* Semi-Transparent Overlay */
-body::before {
-    content: "";
-    position: absolute;
+/* Navbar with Fixed Gradient Background */
+.navbar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.7);
-    z-index: 1;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.7)) !important;
+    box-shadow: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Ensuring Content is Above Overlay */
-.container, .hero-card, .card, .cta-section, .navbar {
-    position: relative;
-    z-index: 2;
-}
-
-/* Navbar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(white , rgba(72, 0, 255, 0))!important;
 }
 
-/* Insights Section */
-.container {
-    margin-top: 50px;
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #155325;
+    font-size: 2rem;
+    text-align: center;
 }
 
-/* Off-Peak Rates Box */
-.off-peak-box {
+.navbar .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navbar Links Styling */
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #43A047 !important; /* Green Color for Links */
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4C2C72 !important; /* Darker Hover Effect */
+}
+
+.navbar-nav .nav-item .text-danger {
+    color: #1e5421 !important; /* Darker Green for Logout */
+}
+
+.navbar-nav .nav-item .text-danger:hover {
+    color: #4C2C72 !important; /* Darker Hover Effect */
+}
+
+/* Adjust Content Below Navbar */
+.container-fluid {
+    padding: 13px;
+    width: 98%;
+}
+
+/* Sidebar Styling */
+aside .card {
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Data Table Box */
-.table-box {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.forecast-box {
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Table Styling */
-.table {
-    background: white;
-    border-radius: 5px;
-}
-
-.table thead {
+.forecast-box:hover {
     background-color: #2E7D32;
     color: white;
 }
 
-/* Footer */
-footer {
-    background-color: #1B5E20;
-    color: white;
-    padding: 15px 0;
+/* Main Dashboard Styling */
+main .card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-weight: normal; /* Remove bold styling */
+}
+
+/* Cost Savings & Charging Days Section - Adjusted Width */
+.card-header i {
+    margin-right: 5px;
+}
+
+.card-body p {
+    font-size: 1rem; /* Keep original text size */
+    font-weight: normal;
+    color: #333;
+}
+
+.text-success {
+    color: #43A047 !important;
+}
+
+.text-primary {
+    color: #4C2C72 !important;
+}
+
+/* Table Styling */
+table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 8px;
     text-align: center;
+    font-size: 1rem;
+}
+
+/* Ensure Full Height */
+html, body {
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+    }
+    .container-fluid {
+        flex-direction: column;
+        margin-top: 160px; /* Ensure space for navbar on smaller screens */
+    }
 }

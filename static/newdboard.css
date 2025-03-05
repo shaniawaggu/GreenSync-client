@@ -1,0 +1,147 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #d8f6de, #115f13);
+
+    /* background: linear-gradient(to bottom, #ffffff, #9CE37D); */
+    background-attachment: fixed; /* Ensures gradient scrolls with page */
+    display: flex;
+    padding-top: 50px; /* Pushes all content below navbar dynamically */
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.7)) !important;
+    box-shadow: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* transition: background 0.3s ease-in-out; */
+}
+
+.navbar {
+    background: linear-gradient(white , rgba(72, 0, 255, 0))!important;
+}
+
+
+/* .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important; /* Changes navbar background when scrolled 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #155325;;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #43A047 !important; /* Green Color for Links */
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4C2C72 !important; /* Darker Hover Effect */
+}
+
+.navbar-nav .nav-item .text-danger {
+    color: #1e5421 !important; /* Darker Green for Logout */
+}
+
+.navbar-nav .nav-item .text-danger:hover {
+    color: #4C2C72 !important; /* Darker Hover Effect */
+}
+
+.container-fluid {
+    /* margin-top: 150px; Increased space to avoid overlap with navbar */
+    padding: 13px;
+    /* flex-grow: 1; */
+    width: 98%;
+}
+
+aside .card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-box {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.forecast-box:hover {
+    background-color: #2E7D32;
+    color: white;
+}
+
+main .card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-weight: normal; 
+}
+
+.card-header i {
+    margin-right: 5px;
+}
+
+.card-body p {
+    font-size: 1rem; 
+    font-weight: normal;
+    color: #333;
+}
+
+.text-success {
+    color: #43A047 !important;
+}
+
+.text-primary {
+    color: #4C2C72 !important;
+}
+
+table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+html, body {
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+    }
+    .container-fluid {
+        flex-direction: column;
+        margin-top: 160px; 
+    }
+}
