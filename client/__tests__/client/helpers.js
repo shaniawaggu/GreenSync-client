@@ -1,12 +1,11 @@
-const path = require("path"); // Import path module
-const jsdom = require("jsdom"); // Import JSDOM to create mock DOM
-const { JSDOM } = jsdom; // Extract JSDOM class constructor
+const path = require("path");
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
 const renderDOM = async (filename) => {
-  const filePath = path.join(__dirname, "../../", filename); // Adjusted path
-
+  const filePath = path.join(__dirname, "..", "..", filename); // Adjust path
   const dom = await JSDOM.fromFile(filePath, {
-    runScripts: "dangerously", // Allow scripts execution
+    runScripts: "dangerously",
     resources: "usable",
   });
 
