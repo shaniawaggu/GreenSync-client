@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1741182942963" clover="3.2.0">
-  <project timestamp="1741182942963" name="All files">
+<coverage generated="1741186637876" clover="3.2.0">
+  <project timestamp="1741186637876" name="All files">
     <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="13" coveredelements="13" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
     <file name="helpers.js" path="/Users/adu/Documents/la-fosse-academy/final-project-week8-9/new-client/GreenSync-client/client/__tests__/client/helpers.js">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <line num="1" count="6" type="stmt"/>
-      <line num="2" count="6" type="stmt"/>
-      <line num="3" count="6" type="stmt"/>
-      <line num="5" count="6" type="stmt"/>
-      <line num="6" count="30" type="stmt"/>
-      <line num="7" count="30" type="stmt"/>
-      <line num="12" count="30" type="stmt"/>
-      <line num="13" count="30" type="stmt"/>
-      <line num="14" count="30" type="stmt"/>
-      <line num="19" count="6" type="stmt"/>
+      <line num="1" count="7" type="stmt"/>
+      <line num="2" count="7" type="stmt"/>
+      <line num="3" count="7" type="stmt"/>
+      <line num="5" count="7" type="stmt"/>
+      <line num="6" count="33" type="stmt"/>
+      <line num="7" count="33" type="stmt"/>
+      <line num="12" count="33" type="stmt"/>
+      <line num="13" count="33" type="stmt"/>
+      <line num="14" count="33" type="stmt"/>
+      <line num="19" count="7" type="stmt"/>
     </file>
   </project>
 </coverage>
