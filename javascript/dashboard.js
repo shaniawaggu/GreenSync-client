@@ -261,10 +261,18 @@ async function fetchOptimalPoints() {
 }
 
 function updateOptimalPoints(data){
-    
+    const dateNews = new Date()
+    const currentDate = weekdays[dateNews.getDay()-1]
+
     weekdays.forEach((day, index) => {
+        console.log(day,index)
         const dayElement = document.querySelector(`#days_${index+1}`);
             if (dayElement) {
+                if (dayElement.textContent == currentDate) {
+                    dayElement.style.borderColor = "lightGreen"
+                    dayElement.style.borderWidth = '2px'
+                }
+
                 if (data[day].startTime == null || data[day].score == null){
                     dayElement.nextElementSibling.textContent = "🌳🌳"
                     dayElement.nextElementSibling.style.backgroundColor = "orange"
@@ -286,6 +294,7 @@ function updateOptimalPoints(data){
                     dayElement.nextElementSibling.style.color = "black"
                     dayElement.nextElementSibling.textContent = "🌳"
                 }
+            
                 }
             }
         });
