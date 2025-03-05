@@ -63,10 +63,9 @@ async function loadChargingStations() {
         }
 
         // Step 2: Fetch latitude/longitude from Postcodes.io API
-        // const postcodeResponse = await fetch(`https://api.postcodes.io/postcodes/${userPostcode.replace(/\s+/g, '')}`);
-        // if (!postcodeResponse.ok) throw new Error("Failed to fetch postcode data");
+        const postcodeResponse = await fetch(`https://api.postcodes.io/postcodes/${userPostcode.replace(/\s+/g, '')}`);
+        if (!postcodeResponse.ok) throw new Error("Failed to fetch postcode data");
 
-        const postcodeResponse = await fetch(`https://api.postcodes.io/postcodes/SE187BE`);
 
         const postcodeData = await postcodeResponse.json();
         const userLatitude = postcodeData.result.latitude;
