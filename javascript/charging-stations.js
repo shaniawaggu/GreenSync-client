@@ -51,11 +51,13 @@ async function loadChargingStations() {
 
     try {
         // Step 1: Fetch user data (postcode)
-        const userResponse = await fetch(`http://localhost:3000/user/${userId}`, options);
+        const userResponse = await fetch(`http://131.145.0.127:3000/user/${userId}`, options);
         if (!userResponse.ok) throw new Error("Failed to fetch user data");
 
         const userData = await userResponse.json();
         const userPostcode = userData.postcode;
+
+        console.log(userPostcode);
 
         if (!userPostcode) {
             console.error("User postcode not found.");
