@@ -70,7 +70,7 @@ body::before {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #4C2C72 !important;
+    color: #4C2C72 !important; 
 }
 
 .navbar-nav .nav-item .text-danger {
@@ -87,7 +87,7 @@ body::before {
 }
 
 .container {
-    margin-top: 80px;
+    margin-top: 1px;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -95,6 +95,7 @@ body::before {
 }
 
 .card {
+    margin-top: 30px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

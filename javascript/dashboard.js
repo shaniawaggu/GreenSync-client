@@ -266,20 +266,27 @@ function updateOptimalPoints(data){
         const dayElement = document.querySelector(`#days_${index+1}`);
             if (dayElement) {
                 if (data[day].startTime == null || data[day].score == null){
-                    dayElement.nextElementSibling.textContent = 0.095
+                    dayElement.nextElementSibling.textContent = "🌳🌳"
+                    dayElement.nextElementSibling.style.backgroundColor = "orange"
                 } else {
                     dayElement.textContent = `${day} ${data[day].startTime.split("T")[1]}`;
                     dayElement.nextElementSibling.textContent = data[day].score.toFixed(3);
                 if (data[day].score > 0.1) {
                     dayElement.nextElementSibling.style.backgroundColor = "lightgreen"
                     dayElement.nextElementSibling.style.color = "black"
+                    dayElement.nextElementSibling.textContent = "🌳🌳🌳"
                 } else if (data[day].score < 0.032 && data[day].score < 0.99) {
-                    dayElement.nextElementSibling.style.backgroundColor = "salmon"
-                    dayElement.nextElementSibling.style.opacity = "0.8"
+                    dayElement.nextElementSibling.style.backgroundColor = "orange"
+                    dayElement.nextElementSibling.style.opacity = "1"
                     dayElement.nextElementSibling.style.color = "black"
-                }    
+                    dayElement.nextElementSibling.textContent = "🌳🌳"
+                }  else {
+                    dayElement.nextElementSibling.style.backgroundColor = "salmon"
+                    dayElement.nextElementSibling.style.opacity = "1"
+                    dayElement.nextElementSibling.style.color = "black"
+                    dayElement.nextElementSibling.textContent = "🌳"
                 }
-                
+                }
             }
         });
     }
