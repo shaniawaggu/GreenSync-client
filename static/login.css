@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     height: 100vh;
-    background: linear-gradient(to bottom, #f6f8f5, #157618a1);
+    background: linear-gradient(to bottom, #f6f8f5, #9af79da1);
     display: flex;
     justify-content: center;
     align-items: center;
