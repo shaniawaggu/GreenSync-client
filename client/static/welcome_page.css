@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../assets/background1.png') no-repeat center center/cover;
+    background-size: cover;
+    color: #333;
+    position: relative;
+
+}
+
+/* Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+/* Ensure Content is Above Overlay */
+.container, .navbar, .footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    margin-right: 15px;
+}
+.navbar-nav .nav-link.text-danger {
+    font-weight: bold;
+}
+
+/* Welcome Section */
+.container.text-center {
+    position: relative;
+    top: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #43A047;
+}
+
+/* Box Styling */
+.box {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.box:hover {
+    background: #43A047;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        font-size: 1.2rem;
+    }
+}
