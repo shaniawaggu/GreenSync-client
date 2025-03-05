@@ -265,19 +265,23 @@ function updateOptimalPoints(data){
     weekdays.forEach((day, index) => {
         const dayElement = document.querySelector(`#days_${index+1}`);
             if (dayElement) {
-                dayElement.textContent = `${day} ${data[day].startTime.split("T")[1]}`;
-                dayElement.nextElementSibling.textContent = data[day].score.toFixed(3);
+                if (data[day].startTime == null || data[day].score == null){
+                    dayElement.nextElementSibling.textContent = 0.095
+                } else {
+                    dayElement.textContent = `${day} ${data[day].startTime.split("T")[1]}`;
+                    dayElement.nextElementSibling.textContent = data[day].score.toFixed(3);
                 if (data[day].score > 0.1) {
                     dayElement.nextElementSibling.style.backgroundColor = "lightgreen"
                     dayElement.nextElementSibling.style.color = "black"
-                } else if (data[day].score < 0.02 && data[day].score < 0.99) {
+                } else if (data[day].score < 0.032 && data[day].score < 0.99) {
                     dayElement.nextElementSibling.style.backgroundColor = "salmon"
                     dayElement.nextElementSibling.style.opacity = "0.8"
                     dayElement.nextElementSibling.style.color = "black"
                 }    
+                }
+                
             }
         });
     }
     
-
 
