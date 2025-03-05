@@ -1,9 +1,12 @@
-/* General Styles */
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #ffffff, #9CE37D);
+    background: linear-gradient(to bottom, #d8f6de, #115f13);
+
+    /* background: linear-gradient(to bottom, #ffffff, #9CE37D); */
     background-attachment: fixed; /* Ensures gradient scrolls with page */
     display: flex;
+    padding-top: 50px; /* Pushes all content below navbar dynamically */
+
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -12,32 +15,36 @@ body {
     color: #333;
 }
 
-/* Navbar with Fixed Gradient Background */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7));
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.7)) !important;
     box-shadow: none;
     padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: background 0.3s ease-in-out;
+    /* transition: background 0.3s ease-in-out; */
 }
 
-.navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95) !important; /* Changes navbar background when scrolled */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.navbar {
+    background: linear-gradient(white , rgba(72, 0, 255, 0))!important;
 }
+
+
+/* .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important; /* Changes navbar background when scrolled 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
 
 .navbar .navbar-brand {
     display: flex;
     align-items: center;
-    color: #4C2C72;
-    font-size: 1.5rem;
+    color: #155325;;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -46,7 +53,6 @@ body {
     margin-right: 10px;
 }
 
-/* Navbar Links Styling */
 .navbar-nav .nav-link {
     font-size: 1rem;
     color: #43A047 !important; /* Green Color for Links */
@@ -58,18 +64,20 @@ body {
 }
 
 .navbar-nav .nav-item .text-danger {
-    color: #2E7D32 !important; /* Darker Green for Logout */
+    color: #1e5421 !important; /* Darker Green for Logout */
 }
 
-/* Adjust Content Below Navbar */
+.navbar-nav .nav-item .text-danger:hover {
+    color: #4C2C72 !important; /* Darker Hover Effect */
+}
+
 .container-fluid {
-    margin-top: 100px; /* Increased space to avoid overlap with navbar */
+    /* margin-top: 150px; Increased space to avoid overlap with navbar */
     padding: 13px;
     /* flex-grow: 1; */
     width: 98%;
 }
 
-/* Sidebar Styling */
 aside .card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
@@ -86,23 +94,21 @@ aside .card {
     color: white;
 }
 
-/* Main Dashboard Styling */
 main .card {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    font-weight: normal; /* Remove bold styling */
+    font-weight: normal; 
 }
 
-/* Cost Savings & Charging Days Section - Adjusted Width */
 .card-header i {
     margin-right: 5px;
 }
 
 .card-body p {
-    font-size: 1rem; /* Keep original text size */
+    font-size: 1rem; 
     font-weight: normal;
     color: #333;
 }
@@ -115,7 +121,6 @@ main .card {
     color: #4C2C72 !important;
 }
 
-/* Table Styling */
 table {
     border-radius: 8px;
     overflow: hidden;
@@ -127,18 +132,16 @@ th, td {
     font-size: 1rem;
 }
 
-/* Ensure Full Height */
 html, body {
     height: 100%;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         background: rgba(255, 255, 255, 0.95) !important;
     }
     .container-fluid {
         flex-direction: column;
-        margin-top: 100px; /* Ensure space for navbar on smaller screens */
+        margin-top: 160px; 
     }
 }
