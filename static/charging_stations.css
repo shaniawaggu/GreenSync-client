@@ -94,8 +94,8 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 125px;
 }
-
 .card {
     margin-top: 30px;
     background: rgba(255, 255, 255, 0.9);
