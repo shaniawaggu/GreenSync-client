@@ -21,7 +21,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "/__tests__/client/helpers.js"
+      "./__tests__/client/helpers.js"
     ]
   }
 }

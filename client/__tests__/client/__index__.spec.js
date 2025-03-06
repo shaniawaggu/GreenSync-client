@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+*/
 const { renderDOM } = require("./helpers");
 
 let dom;
