@@ -112,6 +112,7 @@ const weeklyButton = document.querySelector('#box_8').addEventListener('click',f
 
 // Initalise the x and y axis to variables
 function createWeekChart(data) {
+    console.log(data)
     const timeLabels = data.hourly.time.map((t) => {
         const date = new Date(t);
         const dayName = date.toLocaleDateString('en-GB', { weekday: 'short' }); // Get the full day name
@@ -166,7 +167,7 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                     }
                 },
                 {
-                    label: 'Solar Energy (W/m²)',
+                    label: 'Solar Energy (MW)',
                     data: solar_energy,
                     borderColor: 'rgba(255, 99, 132, 1)',
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -176,7 +177,7 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                     pointRadius: 0.2,
                 },
                 {
-                    label: 'Wind Energy (km/h)',
+                    label: 'Wind Energy (MW)',
                     data: wind_energy,
                     borderColor: 'rgba(123, 99, 132, 1)',
                     backgroundColor: 'rgba(123, 99, 132, 0.2)',
@@ -206,7 +207,7 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                     position: 'right',
                     title: {
                         display: true,
-                        text: 'Wind Energy (km/h)',
+                        text: 'Wind Energy (MW)',
                     },
                     ticks: {
                         beginAtZero: true,
@@ -227,7 +228,7 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                 x: {
                     title: {
                         display: true,
-                        text: 'Date',
+                        text: 'Date / Time',
                     },
                 },
             },
