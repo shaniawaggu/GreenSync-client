@@ -58,6 +58,8 @@ body::before {
     color: #155325;
     font-size: 2rem;
     text-align: center;
+    font-family: "Lilita One", sans-serif !important;
+
 }
 
 .navbar .navbar-brand img {

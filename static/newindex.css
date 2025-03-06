@@ -27,8 +27,11 @@ body {
 
 .navbar-brand {
     color: #348113ec;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
+    font-family: "Lilita One", sans-serif !important;
+    /* font-weight: 400; */
+   
 }
 .navbar-nav {
     display: flex;

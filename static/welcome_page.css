@@ -17,7 +17,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(208, 246, 214, 0.213);
+    background: rgba(208, 246, 214, 0.329);
     z-index: 1;
 }
 
@@ -46,6 +46,8 @@ body::before {
     color: #155325;
     font-size: 2rem;
     font-weight: bold;
+    font-family: "Lilita One", sans-serif !important;
+
 }
 .navbar .nav-link {
     color: #155325 !important;
