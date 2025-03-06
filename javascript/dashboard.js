@@ -153,7 +153,7 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
             labels: timeLabels,
             datasets: [
                 {
-                    label: 'Estimated Energy (%)',
+                    label: 'Estimated Energy (MW)',
                     data: estimated_energy,
                     borderColor: 'rgba(75, 192, 192, 1)',
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -172,17 +172,17 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderWidth: 2,
                     tension: 0.4,
-                    yAxisID: 'y2',
+                    yAxisID: 'y3',
                     pointRadius: 0.2,
                 },
                 {
-                    label: 'Wind Energy (km/)',
+                    label: 'Wind Energy (km/h)',
                     data: wind_energy,
                     borderColor: 'rgba(123, 99, 132, 1)',
                     backgroundColor: 'rgba(123, 99, 132, 0.2)',
                     borderWidth: 1.5,
                     tension: 0.4,
-                    yAxisID: 'y3',
+                    yAxisID: 'y2',
                     pointRadius: 0.2,
                 },
             ],
@@ -195,7 +195,7 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                     position: 'left',
                     title: {
                         display: true,
-                        text: 'Estimated Energy (%)',
+                        text: 'Estimated Energy (MW)',
                     },
                     ticks: {
                         beginAtZero: true,
@@ -206,7 +206,7 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                     position: 'right',
                     title: {
                         display: true,
-                        text: 'Solar Energy (W/m²)',
+                        text: 'Wind Energy (km/h)',
                     },
                     ticks: {
                         beginAtZero: true,
@@ -214,11 +214,11 @@ function chartJSRun(timeLabels, estimated_energy, wind_energy, solar_energy) {
                 },
                 y3: {
                     type: 'linear',
-                    position: 'left',
+                    position: 'right',
                     display: false,
                     title: {
                         display: true,
-                        text: 'Wind Energy (km/h)',
+                        text: '',
                     },
                     ticks: {
                         beginAtZero: true,
@@ -269,10 +269,10 @@ function updateOptimalPoints(data){
         const dayElement = document.querySelector(`#days_${index+1}`);
             if (dayElement) {
                 if (dayElement.textContent == currentDate) {
-                    dayElement.style.borderColor = "lightGreen"
+                    dayElement.style.borderColor = "lightblue"
                     dayElement.style.borderWidth = '2px'
+                    dayElement.style.backgroundColor = "lightGreen"
                 }
-
                 if (data[day].startTime == null || data[day].score == null){
                     dayElement.nextElementSibling.textContent = "🌳🌳"
                     dayElement.nextElementSibling.style.backgroundColor = "orange"
