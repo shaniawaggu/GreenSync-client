@@ -1,0 +1,167 @@
+body {
+    min-height: 100vh;
+    background: url('../assets/background1.png') no-repeat center center/cover;
+    background-size: cover;
+    /* background: linear-gradient(to bottom, #d8f6de, #115f13); */
+
+    /* background: linear-gradient(to bottom, #ffffff, #9CE37D); */
+    background-attachment: fixed; /* Ensures gradient scrolls with page */
+    display: flex;
+    padding-top: 50px; /* Pushes all content below navbar dynamically */
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(208, 246, 214, 0.213); /* Light overlay for readability */
+    z-index: 1;
+}
+
+.container-fluid, .hero-card, .card, .cta-section, .navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.7)) !important;
+    box-shadow: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* transition: background 0.3s ease-in-out; */
+}
+
+.navbar {
+    background: linear-gradient(white , rgba(72, 0, 255, 0))!important;
+}
+
+
+/* .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important; /* Changes navbar background when scrolled 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #155325;;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Lilita One", sans-serif !important;
+
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #43A047 !important; 
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4C2C72 !important; 
+}
+
+.navbar-nav .nav-item .text-danger {
+    color: #1e5421 !important; 
+}
+
+.navbar-nav .nav-item .text-danger:hover {
+    color: #4C2C72 !important; 
+}
+
+.container-fluid {
+    /* margin-top: 150px; 
+    padding: 13px;
+    /* flex-grow: 1; */
+    width: 98%;
+}
+
+aside .card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-box {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.forecast-box:hover {
+    background-color: #2E7D32;
+}
+
+main .card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-weight: bold; 
+}
+
+.card-header i {
+    margin-right: 5px;
+}
+
+.card-body p {
+    font-size: 1rem; 
+    font-weight: normal;
+    color: #333;
+}
+
+.text-success {
+    color: #43A047 !important;
+}
+
+.text-primary {
+    color: #4C2C72 !important;
+}
+
+table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+html, body {
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+    }
+    .container-fluid {
+        flex-direction: column;
+        margin-top: 160px; 
+    }
+}

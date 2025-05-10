@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome - GreenSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/welcome_page.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="./assets/favicon1.png" alt="GreenSync Logo" width="40"> GreenSync
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-danger" href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+
+    <div class="welcome-container text-center d-flex flex-column justify-content-center align-items-center">
+        <h1 class="fw-bold text-white">Hello <span id="username">Sam,</span></h1>
+        <br> 
+        <p>
+            Welcome to GreenSync, your intelligent EV charging companion! Whether you're looking to optimise energy use, reduce costs, or find your nearest charger, we're here to help. Navigate seamlessly through your dashboard, explore nearby charging stations, and gain insights into the best charging times - all in one place. 
+        </p>
+        <div class="row mt-4 w-75">
+            <div class="col-md-4">
+                <a href="dashboard.html" class="box p-4 shadow-sm d-block text-decoration-none"> <br> Dashboard</a>
+            </div>
+            <div class="col-md-4">
+                <a href="charging_stations.html" class="box p-4 shadow-sm d-block text-decoration-none"> <br> Charging Stations</a>
+            </div>
+            <div class="col-md-4">
+                <a href="insights.html" class="box p-4 shadow-sm d-block text-decoration-none"> <br> EV Insights</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

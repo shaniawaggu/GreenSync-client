@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up - GreenSync</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/sign_up.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="./javascript/register.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top">
+        <div class="container-fluid text-center">
+            <a class="navbar-brand mx-auto" href="index.html">
+                <img src="./assets/favicon1.png" alt="GreenSync Logo" width="40"> GreenSync
+            </a>
+        </div>
+    </nav>
+    
+    <div class="signup-wrapper">
+        <!-- Left Side: Heading & Review Bubble -->
+        <div class="signup-left">
+            <h2>Join GreenSync Today!</h2>
+            <div class="review-bubble">
+                "GreenSync made my EV charging effortless and cost-efficient! Highly recommend."
+                <br><br>
+                - Sarah Thompson
+            </div>
+            <br>
+            <div class="review-bubble">
+                "With GreenSync, I never worry about overpaying for electricity. A game-changer!"
+                <br><br>
+                - James Carter
+            </div>
+        </div>
+        
+
+        <!-- Signup Container -->
+        <div class="signup-container">
+            <h3 class="text-center">Sign Up</h3>
+            <form id="sign-up-form" method="POST">
+                <div class="input-group mb-3">
+                    <span class="input-group-text border-end-0">
+                        <i class="text-success fas fa-user"></i>
+                    </span>
+                    <div class="form-floating flex-grow-1">
+                        <input type="text" class="form-control border-start-0" name="username" id="floatingUsername" placeholder="Username" required>
+                        <label for="floatingUsername">Username</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="fas fa-envelope  text-muted"></i>
+                    </span>
+                    <div class="form-floating flex-grow-1">
+                        <input type="email" class="form-control border-start-0" name="email" id="floatingEmail" placeholder="Email" required>
+                        <label for="floatingEmail">Email</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="fas fa-lock text-muted"></i>
+                    </span>
+                    <div class="form-floating flex-grow-1">
+                        <input type="password" class="form-control border-start-0" name="password" id="floatingPassword" placeholder="Password" required>
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="fas fa-map-marker-alt text-muted"></i>
+                    </span>
+                    <div class="form-floating flex-grow-1">
+                        <input type="text" class="form-control border-start-0" name="postcode" id="floatingPostcode"
+                               placeholder="Postcode" required pattern="^[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}$"
+                               title="Enter a valid UK postcode (e.g., SE01 2UB)">
+                        <label for="floatingPostcode">Postcode</label>
+                    </div>                    
+                </div>
+                <small class="text-box d-block mb-3 text-start">
+                    Postcode must:
+                    <ul class="text-box">
+                        <li>Be a valid UK postcode (e.g.,<strong> SW1A 1AA</strong>)</li>
+                    </ul>
+                </small>                
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+                </div>
+            </form>
+            <div class="text-center mt-3">
+                <p>Already have an account? <a href="login.html">Log in here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

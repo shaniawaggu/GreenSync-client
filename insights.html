@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insights - GreenSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="static/insights.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="./assets/favicon1.png" alt="GreenSync Logo" width="40"> GreenSync
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="welcome.html"><i class="fas fa-home"></i> Welcome</a></li>
+                    <li class="nav-item"><a class="nav-link" href="charging_stations.html"><i class="fas fa-charging-station"></i> Charging Stations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>      
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- EV Tips -->
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-success text-white fw-bold">
+                        <h5 class="mb-0 fw-bold">EV Tips</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>- Optimise your EV charging by utilising off-peak hours to save money.</p>
+                        <p>- Regularly check your tire pressure to maximise efficiency.</p>
+                        <p>- Plan longer trips in advance to ensure charger availability.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Energy Rates Across UK -->
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-success fw-bold text-white">
+                        <h5 class="mb-0 fw-bold">Energy Rates Across UK</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Current electricity prices for different regions.</p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Region</th>
+                                    <th>Rate (p/kWh)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>London</td><td>8.5p</td></tr>
+                                <tr><td>East England</td><td>8.2p</td></tr>
+                                <tr><td>South East England</td><td>7.9p</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- EV Tariff Comparison -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0 fw-bold">EV Tariff Comparison</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Compare off-peak and peak rates from leading EV energy providers.</p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Provider</th>
+                                    <th>Peak Rate (p/kWh)</th>
+                                    <th>Off-Peak Rate (p/kWh)</th>
+                                    <th>Standing Charge (p/day)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://octopus.energy/go/" target="_blank">Octopus Go</a></td>
+                                    <td>30p</td>
+                                    <td>7.5p</td>
+                                    <td>25p</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.edfenergy.com/electric-cars/tariffs" target="_blank">EDF EV Tariff</a></td>
+                                    <td>32p</td>
+                                    <td>8p</td>
+                                    <td>27p</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.eonenergy.com/ev/next-drive.html" target="_blank">E.ON Next Drive</a></td>
+                                    <td>31p</td>
+                                    <td>7.8p</td>
+                                    <td>26p</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    height: 100vh;
+    background: url('../assets/background1.png') no-repeat center center/cover;
+    background-size: cover;
+    /* background: linear-gradient(to bottom, #d8f6de, #115f13); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(208, 246, 214, 0.329);
+    z-index: 1;
+}
+
+.welcome-container, .hero-card, .card, .cta-section, .navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    position: fixed;
+    background: linear-gradient(white , rgba(72, 0, 255, 0))!important;
+
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.navbar {
+    background: linear-gradient(white , rgba(72, 0, 255, 0))!important;
+}
+
+.navbar .navbar-brand {
+    color: #155325;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Lilita One", sans-serif !important;
+
+}
+.navbar .nav-link {
+    color: #155325 !important;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+    color: #9CE37D !important;
+}
+
+
+.welcome-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 150px;
+}
+.welcome-container h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #155325 !important;
+}
+
+.welcome-container p {
+    color: #155325 !important;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    max-width: 820px;
+    font-weight: 670;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box {
+    flex: 1;
+    max-width: 300px;
+    height: 150px; 
+    background: rgba(220, 229, 223, 0.472); 
+    color: #155325;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    margin: 0 10px;
+    padding: 0; 
+    line-height: 1.2; 
+
+}
+
+.box:hover {
+    background: #15532435;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        max-width: 100%;
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    .welcome-container h1 {
+        font-size: 2rem;
+    }
+}
